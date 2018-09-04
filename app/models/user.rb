@@ -7,4 +7,5 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   validates :name, presence: true
+  validates :membership_number, format: { with: /\A[A-Z]{3}\d{6}/, message: "shoul be 3upcase characters + 6integers" }, allow_blank: true
 end
