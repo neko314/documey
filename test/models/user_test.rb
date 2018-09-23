@@ -20,26 +20,32 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "is invalid without character" do
-    assert true
+    @user.membership_number = "1" * 6
+    assert @user.invalid?
   end
 
   test "is invalid with little chatacters" do
-    assert true
+    @user.membership_number = "a" * 3 + "1" * 6
+    assert @user.invalid?
   end
 
   test "is invalid when characters are longer than three" do
-    assert true
+    @user.membership_number = "A" * 4 + "1" * 6
+    assert @user.invalid?
   end
 
   test "is invalid when characters are shorter than three" do
-    assert true
+    @user.membership_number = "A" * 2 + "1" * 6
+    assert @user.invalid?
   end
 
   test "is invalid when integers are longer than six" do
-    assert true
+    @user.membership_number = "A" * 3 + "1" * 7
+    assert @user.invalid?
   end
 
   test "is invalid when integers are shorter than six" do
-    assert true
+    @user.membership_number = "A" * 3 + "1" * 5
+    assert @user.invalid?
   end
 end
