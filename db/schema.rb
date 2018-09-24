@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_04_010149) do
+ActiveRecord::Schema.define(version: 2018_09_23_135642) do
+
+  create_table "seminars", force: :cascade do |t|
+    t.date "date"
+    t.time "start_at"
+    t.time "finish_at"
+    t.string "place"
+    t.string "title"
+    t.string "theme"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_seminars_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
