@@ -1,18 +1,15 @@
 class ParticipantsController < SeminarsController
   def index
-    console
     @participants = Participant.where(seminar_id: params[:seminar_id]).all
     @seminar = Seminar.find(params[:seminar_id])
 
   end
 
   def show
-    console
     @participant = Participant.find(params[:id])
   end
 
   def new
-    console
   end
 
   def edit
@@ -23,7 +20,6 @@ class ParticipantsController < SeminarsController
     @seminar = Seminar.find(params[:seminar_id])
     @participant.seminar_id = @seminar.id
     if @participant.save
-      console
       redirect_to user_seminar_participants_path(@seminar)
     else
       redirect_to new_user_seminar_participant_path(@seminar)
