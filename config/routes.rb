@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   root :to => 'user_sessions#new'
   resources :user_sessions
   resources :users do
-    resources :seminars
+    resources :seminars do
+      resources :participants
   end
 
   get 'login' => 'user_sessions#new', :as => :login
