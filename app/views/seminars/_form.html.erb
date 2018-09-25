@@ -1,0 +1,36 @@
+<%= form_with(model: seminar, local: true) do |f| %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_at %>
+    <%= f.time_field :start_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :finish_at %>
+    <%= f.time_field :finish_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :place %>
+    <%= f.text_field :place %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :theme %>
+    <%= f.text_field :theme %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
