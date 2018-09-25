@@ -14,3 +14,5 @@
   <strong>Email:</strong>
   <%= @participant.email %>
 </p>
+
+<%= link_to 'Edit', edit_user_seminar_participant_path(@participant, current_user) %>

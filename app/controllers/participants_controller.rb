@@ -7,6 +7,7 @@ class ParticipantsController < SeminarsController
   end
 
   def show
+    console
     @participant = Participant.find(params[:id])
   end
 
