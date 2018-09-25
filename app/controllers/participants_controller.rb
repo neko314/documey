@@ -34,6 +34,9 @@ class ParticipantsController < SeminarsController
   end
 
   def destroy
+    @participant = Participant.find(params[:id])
+    @participant.destroy
+    redirect_to user_seminar_participants_path(current_user)
   end
 
   private
