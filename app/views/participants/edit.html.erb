@@ -1,3 +1,5 @@
 <h1>Edit Parcitipant</h1>
 
 <%= render 'form', participant: @participant %>
+
+<%= link_to 'Participants', user_seminar_participants_path(current_user) %>

@@ -11,7 +11,7 @@
       <th>Theme</th>
       <th>User</th>
 
-      <th colspan="1"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -27,6 +27,7 @@
         <td><%= seminar.user_id %></td>
 
         <td><%= link_to 'Show', user_seminar_path(current_user, seminar) %></td>
+        <td><%= link_to 'Participants', user_seminar_participants_path(current_user, seminar) %></td>
       </tr>
     <% end %>
   </tbody>
