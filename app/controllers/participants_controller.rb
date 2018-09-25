@@ -7,7 +7,7 @@ class ParticipantsController < SeminarsController
   end
 
   def show
-    @oarticipant = Participant.find(params[:id])
+    @participant = Participant.find(params[:id])
   end
 
   def new
