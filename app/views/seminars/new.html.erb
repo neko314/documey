@@ -1,36 +1,5 @@
-  <%= form_for :seminar, url: user_seminars_path do |f| %>
+<h1>New Seminar</h1>
 
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.date_field :date %>
-  </div>
+<%= render 'form', seminar: @seminar%>
 
-  <div class="field">
-    <%= f.label :start_at %>
-    <%= f.time_field :start_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :finish_at %>
-    <%= f.time_field :finish_at %>
-  </div>
-
-  <div class="field">
-    <%= f.label :place %>
-    <%= f.text_field :place %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :theme %>
-    <%= f.text_field :theme %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%= link_to 'Back', user_seminars_path %>
