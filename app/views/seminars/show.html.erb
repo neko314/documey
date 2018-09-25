@@ -23,7 +23,8 @@
         <td><%= @seminar.theme %></td>
         <td><%= @seminar.user_id %></td>
 
-        <td><%= link_to 'Show', user_seminar_path(@seminar) %></td>
+        <td><%= link_to 'Edit', edit_user_seminar_path(@seminar) %></td>
+        <td><%= link_to 'Destroy', user_seminar_path(@seminar), method: :delete %></td>
       </tr>
   </tbody>
 </table>

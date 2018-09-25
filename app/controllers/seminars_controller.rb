@@ -25,6 +25,9 @@ class SeminarsController < ApplicationController
   end
 
   def destroy
+    @seminar = Seminar.find(params[:id])
+    @seminar.destroy
+    redirect_to user_seminars_path(current_user)
   end
 
   private
