@@ -13,6 +13,7 @@ class ParticipantsController < SeminarsController
   end
 
   def edit
+    @participant = Participant.find(params[:id])
   end
 
   def create
@@ -22,7 +23,7 @@ class ParticipantsController < SeminarsController
     if @participant.save
       redirect_to user_seminar_participants_path(@seminar)
     else
-      redirect_to new_user_seminar_participant_path(@seminar)
+      redirect_to edit_user_seminar_participant_path(@seminar)
     end
   end
 
