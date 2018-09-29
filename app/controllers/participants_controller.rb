@@ -2,7 +2,6 @@ class ParticipantsController < SeminarsController
   def index
     @participants = Participant.where(seminar_id: params[:seminar_id]).all
     @seminar = Seminar.find(params[:seminar_id])
-
   end
 
   def show
@@ -29,8 +28,9 @@ class ParticipantsController < SeminarsController
   end
 
   def update
-    if @participant = Participant.update(participant_params)
-      redirect_to user_seminar_participants_path, notice: "update participant"
+    @participant = Participant.find(params[:id])
+    if @participant.update(participant_params)
+      redirect_to user_seminar_participant_path(@participant), notice: "update participant"
     else 
       redirect_to edit_user_seminar_participant_path, notice: "fail to update participant"
     end
