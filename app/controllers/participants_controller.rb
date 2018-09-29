@@ -28,6 +28,11 @@ class ParticipantsController < SeminarsController
   end
 
   def update
+    if @participant = Participant.update(participant_params)
+      redirect_to user_seminar_participants_path, notice: "update_participant"
+    else 
+      redirect_to edit_user_seminar_participant_path, notice: "fail_to_update_participant"
+    end
   end
 
   def destroy
