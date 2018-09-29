@@ -10,6 +10,7 @@ class ParticipantsController < SeminarsController
   end
 
   def new
+    @participant = Participant.new
   end
 
   def edit
@@ -21,17 +22,17 @@ class ParticipantsController < SeminarsController
     @seminar = Seminar.find(params[:seminar_id])
     @participant.seminar_id = @seminar.id
     if @participant.save
-      redirect_to user_seminar_participants_path(@seminar)
+      redirect_to user_seminar_participants_path(@seminar), notice: "create participant"
     else
-      redirect_to edit_user_seminar_participant_path(@seminar)
+      redirect_to edit_user_seminar_participant_path(@seminar), notice: "fail to create participant"
     end
   end
 
   def update
     if @participant = Participant.update(participant_params)
-      redirect_to user_seminar_participants_path, notice: "update_participant"
+      redirect_to user_seminar_participants_path, notice: "update participant"
     else 
-      redirect_to edit_user_seminar_participant_path, notice: "fail_to_update_participant"
+      redirect_to edit_user_seminar_participant_path, notice: "fail to update participant"
     end
   end
 
