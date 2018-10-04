@@ -44,7 +44,7 @@ class ParticipantsController < SeminarsController
 
   private
     def participant_params
-      params.require(:participant).permit(:name, :membership_number, :email, :seminar_id)
+      params.require(:participant).permit(:name, :membership_number, :email)
     end
 
 end
