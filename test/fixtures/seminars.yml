@@ -1,11 +1,13 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+seminar1:
+  id: 1
+  date: "2018-10-01"
+  place: "区民館"
+  title: "楽しく"
+  theme: "レベルアップ"
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+seminar2:
+  id: 2
+  date: "2018-09-01"
+  place: "セミナーホール"
+  title: "実践力向上"
+  theme: "スキルアップ"

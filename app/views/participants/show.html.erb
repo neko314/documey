@@ -1,0 +1,20 @@
+<h1>Participant</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @participant.name %>
+</p>
+
+<p>
+  <strong>Membership_number:</strong>
+  <%= @participant.membership_number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @participant.email %>
+</p>
+
+<%= link_to 'Participants', user_seminar_participants_path(current_user) %>
+
+<%= link_to 'Edit', edit_user_seminar_participant_path(@participant, current_user) %>

@@ -1,0 +1,6 @@
+participant:
+  id: 1
+  name: nakama
+  membership_number: ABC222222
+  email: participant@example.com
+  seminar_id: 1
