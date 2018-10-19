@@ -4,6 +4,7 @@ seminar1:
   place: "区民館"
   title: "楽しく"
   theme: "レベルアップ"
+  user_id: 1
 
 seminar2:
   id: 2
@@ -11,3 +12,4 @@ seminar2:
   place: "セミナーホール"
   title: "実践力向上"
   theme: "スキルアップ"
+  user_id: 1
