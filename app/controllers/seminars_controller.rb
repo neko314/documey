@@ -9,6 +9,7 @@ class SeminarsController < ApplicationController
   end
 
   def new
+     @seminar= Seminar.new
   end
 
   def edit
@@ -32,6 +33,6 @@ class SeminarsController < ApplicationController
 
   private
     def seminar_params
-      params.require(:seminar).permit(:date, :start_at, :finish_at, :place, :title, :theme, :user_id)
+      params.require(:seminar).permit(:date, :start_at, :finish_at, :place, :title, :theme)
     end
 end
