@@ -91,4 +91,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.load_defaults 5.2
+  Raven.configure do |config|
+    config.dsn = ENV["SENTRY_DSN"]
+    config.environments = %w[ production ]
+  end
 end
