@@ -23,7 +23,7 @@
         <td><%= seminar.place %></td>
         <td><%= seminar.title %></td>
         <td><%= seminar.theme %></td>
-        <td><%= seminar.user_id %></td>
+        <td><%= seminar.user.name %></td>
 
         <td><%= link_to 'Show', user_seminar_path(current_user, seminar) %></td>
         <td><%= link_to 'Participants', user_seminar_participants_path(current_user, seminar) %></td>
