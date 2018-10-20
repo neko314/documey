@@ -1,18 +1,14 @@
 <%= form_with model: [:user, @seminar] do |f| %>
 
-  <div class="field">
-    <%= f.label :date %>
-    <%= f.date_field :date %>
-  </div>
 
   <div class="field">
     <%= f.label :start_at %>
-    <%= f.time_field :start_at %>
+    <%= f.datetime_field :start_at %>
   </div>
 
   <div class="field">
     <%= f.label :finish_at %>
-    <%= f.time_field :finish_at %>
+    <%= f.datetime_field :finish_at %>
   </div>
 
   <div class="field">
