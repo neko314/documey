@@ -12,7 +12,7 @@
   <body>
     <div id="nav">
       <% if current_user %>
-        <%= link_to user_seminars_path(current) do%>
+        <%= link_to user_seminars_path(current_user) do%>
           <%= image_tag 'logo.png' %>
         <% end%>
         <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
