@@ -13,15 +13,25 @@ class SeminarsController < ApplicationController
   end
 
   def edit
+    @seminar = Seminar.find(params[:id])
   end
 
   def create
-    @seminar= Seminar.new(seminar_params)
+    @seminar = Seminar.new(seminar_params)
     @seminar.user_id = current_user.id
     if @seminar.save
       redirect_to user_seminar_path(current_user, @seminar)
     else
       redirect_to new_user_seminar_path
+    end
+  end
+
+  def update
+    @seminar = Seminar.find(params[:id])
+    if @seminar.update(seminar_params)
+      redirect_to user_seminar_path(current_user, @seminar)
+    else
+      redirect_to edit_user_seminar_path
     end
   end
 
