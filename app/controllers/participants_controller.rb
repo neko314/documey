@@ -1,7 +1,7 @@
-class ParticipantsController < SeminarsController
+class ParticipantsController < ApplicationController
   def index
-    @participants = Participant.where(seminar_id: params[:seminar_id]).all
     @seminar = Seminar.find(params[:seminar_id])
+    @participants = @seminar.participants
   end
 
   def show
