@@ -5,7 +5,6 @@
     <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,9 +12,15 @@
   <body>
     <div id="nav">
       <% if current_user %>
+        <%= link_to user_seminars_path(current) do%>
+          <%= image_tag 'logo.png' %>
+        <% end%>
         <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
         <%= link_to "Logout", :logout, method: :post %>
       <% else %>
+        <%= link_to "/" do%>
+          <%= image_tag 'logo.png' %>
+        <% end%>
         <%= link_to "Register", new_user_path %>
       <% end %>
     </div>
