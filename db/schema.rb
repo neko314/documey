@@ -23,9 +23,8 @@ ActiveRecord::Schema.define(version: 2018_09_25_061535) do
   end
 
   create_table "seminars", force: :cascade do |t|
-    t.date "date"
-    t.time "start_at"
-    t.time "finish_at"
+    t.datetime "start_at"
+    t.datetime "finish_at"
     t.string "place"
     t.string "title"
     t.string "theme"
