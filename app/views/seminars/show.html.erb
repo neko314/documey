@@ -3,7 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Date</th>
       <th>Start_at</th>
       <th>Finish_at</th>
       <th>Place</th>
@@ -15,9 +14,8 @@
 
   <tbody>
       <tr>
-        <td><%= @seminar.date %></td>
-        <td><%= @seminar.start_at %></td>
-        <td><%= @seminar.finish_at %></td>
+        <td><%= @seminar.start_at.strftime("%Y-%m-%d %k:%M") %></td>
+        <td><%= @seminar.finish_at.strftime("%Y-%m-%d %k:%M") %></td>
         <td><%= @seminar.place %></td>
         <td><%= @seminar.title %></td>
         <td><%= @seminar.theme %></td>
