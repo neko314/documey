@@ -3,7 +3,6 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.3-node-browsers
-      - image: postgres
     steps:
       - checkout
       - run: bundle install
