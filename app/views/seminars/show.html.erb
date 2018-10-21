@@ -1,5 +1,5 @@
-<h1><%= @seminar.title %></h1>
-<h2><%= @seminar.theme %></h2>
+<h1 class="title"><%= @seminar.title %></h1>
+<h2 class="theme"><%= @seminar.theme %></h2>
 
 <%= link_to 'Generate Seminar PDF', user_seminar_path(current_user, @seminar, format: 'pdf') %>
 <table>
@@ -28,13 +28,13 @@
     <tr>
       <th>MenbershipNumber</th>
       <th>Name</th>
-      <th></th
+      <th colspan="1"></th>
     </tr>
     <% @seminar.participants.each do |p| %>
     <tr>
       <td><%= p.membership_number %></td>
       <td><%= p.name %></td>
-      <td><%= link_to 'Show Participant', user_seminar_participant_path(current_user, @seminar, p) %><td>
+      <td><%= link_to 'Show Participant', user_seminar_participant_path(current_user, @seminar, p) %></td>
     </tr>
     <% end %>
   </table>
@@ -47,4 +47,3 @@
 <br>
 
 <%= link_to 'New Seminar', new_user_seminar_path %>
-<%= link_to 'Seminar Index', user_seminars_path %>

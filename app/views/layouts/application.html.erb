@@ -16,22 +16,26 @@
           <%= image_tag 'logo.svg', class:"logo" %>
         <% end%>
         <ul class="header-menus">
-          <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
-          <li><%= link_to "Logout", :logout, method: :post %></li>
+          <li class="menu"><%= link_to "#{current_user.name}", user_path(current_user) %></li>
+          <li class="menu"><%= link_to 'My Seminars', user_seminars_path(current_user) %>
+          <li class="menu"><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
+          <li class="menu"><%= link_to "Logout", :logout, method: :post %></li>
         </ul>
       <% else %>
         <%= link_to "/" do%>
           <%= image_tag 'logo.png' %>
         <% end%>
         <ul class="header-menus">
-          <li><%= link_to "Register", new_user_path %></li>
+          <li class="menu"><%= link_to "Register", new_user_path %></li>
         </ul>
       <% end %>
     </nav>
-    <div>
+    <section class="notice">
       <p id="notice"><%= flash[:notice] %></p>
       <!--<p id="alert"><%= flash[:alert] %></p> -->
-    </div>
-    <%= yield %>
+    </section>
+    <article class="content">
+      <%= yield %>
+    <article class="content">
   </body>
 </html>
