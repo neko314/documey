@@ -8,8 +8,7 @@
       <th>Place</th>
       <th>Title</th>
       <th>Theme</th>
-      <th>User</th>
-      <th colspan="2"></th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -21,8 +20,6 @@
         <td><%= seminar.place %></td>
         <td><%= seminar.title %></td>
         <td><%= seminar.theme %></td>
-        <td><%= seminar.user.name %></td>
-
         <td><%= link_to 'Show', user_seminar_path(current_user, seminar) %></td>
       </tr>
     <% end %>
