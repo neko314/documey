@@ -2,4 +2,6 @@
  
  <%= render 'form', seminar: @seminar %>
 
- <%= link_to 'Seminar index', user_seminars_path(current_user) %>
+
+<%= link_to 'Delete Seminar', user_seminar_path(@seminar), method: :delete %>
+<%= link_to 'Seminar index', user_seminars_path(current_user) %>

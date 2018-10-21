@@ -1,4 +1,5 @@
-<h1>Seminars</h1>
+<h1><%= @seminar.title %></h1>
+<h2><%= @seminar.theme %></h2>
 
 <table>
   <thead>
@@ -6,8 +7,6 @@
       <th>Start_at</th>
       <th>Finish_at</th>
       <th>Place</th>
-      <th>Title</th>
-      <th>Theme</th>
       <th>User</th>
     </tr>
   </thead>
@@ -17,16 +16,12 @@
         <td><%= @seminar.start_at.strftime("%Y-%m-%d %k:%M") %></td>
         <td><%= @seminar.finish_at.strftime("%Y-%m-%d %k:%M") %></td>
         <td><%= @seminar.place %></td>
-        <td><%= @seminar.title %></td>
-        <td><%= @seminar.theme %></td>
         <td><%= @seminar.user.name %></td>
-
-        <td><%= link_to 'Edit', edit_user_seminar_path(@seminar) %></td>
-        <td><%= link_to 'Destroy', user_seminar_path(@seminar), method: :delete %></td>
       </tr>
   </tbody>
 </table>
 
+<td><%= link_to 'Edit Seminar', edit_user_seminar_path(@seminar) %></td>
 <br>
 
 <%= link_to 'New Seminar', new_user_seminar_path %>
