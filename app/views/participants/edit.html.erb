@@ -2,5 +2,5 @@
 
 <%= render 'form', participant: @participant %>
 
-<%= link_to 'Participants', user_seminar_participants_path(current_user) %> |
-<%= link_to 'Destroy', user_seminar_participant_path, method: :delete %>
+<%= link_to 'Seminar', user_seminar_path(current_user, @seminar) %> |
+<%= link_to 'Destroy Participant', user_seminar_participant_path(current_user, @seminar, @participant), method: :delete %>
