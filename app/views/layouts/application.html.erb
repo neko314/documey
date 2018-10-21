@@ -13,7 +13,7 @@
     <div id="nav">
       <% if current_user %>
         <%= link_to user_seminars_path(current_user) do%>
-          <%= image_tag 'logo.png' %>
+          <%= image_tag 'logo.svg', class:"logo" %>
         <% end%>
         <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
         <%= link_to "Logout", :logout, method: :post %>
