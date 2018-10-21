@@ -1,9 +1,4 @@
 class ParticipantsController < ApplicationController
-  def index
-    @seminar = Seminar.find(params[:seminar_id])
-    @participants = @seminar.participants
-  end
-
   def show
     @participant = Participant.find(params[:id])
   end
