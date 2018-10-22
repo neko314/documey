@@ -7,7 +7,8 @@
     <%= wicked_pdf_javascript_include_tag "number_pages" %>
   </head>
   <body onload='number_pages'>
-    <header>
+  <div class="report">
+    <header class="report-header">
       <ul class="kinds">
         <li class="category">活動実施報告書</li>
         <li class="alphabet-mark">F</li>
@@ -17,7 +18,7 @@
         <li class="contact">メール: point@j-cda.jp</li>
       </ul>
     </header>
-      <address>
+      <address class="report-address">
         <p class="created_on">西暦<%= Date.today.year %>年 <%= Date.today.month %>月<%= Date.today.day %>日</p>
         <p class="associtation">日本キャリア開発協会 御中</p>
       </address>
@@ -25,27 +26,28 @@
         <p class="report-title">活動実施報告書<span class="subtitle">(支部地区会・研究会・ピアトレ・各種勉強会等)</span></p>
         <p class="subtext">下記の通り、活動を行いましたので、報告いたします。</p>
         <table class="report-table">
-          <tr><th>フリガナ</th><td></td></tr>
-          <tr><th>報告者氏名(幹事)</th><td><%= @seminar.user.name %></td></tr>
-          <tr><th>会員番号</th><td><%= @seminar.user.membership_number %></td></tr>
-          <tr><th>実施日時</th><td><%= "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%Y-%m-%d %k:%M")}" %></td></tr>
-          <tr><th>実施場所</th><td><%= @seminar.place %></td></tr>
-          <tr><th>会の名称</th><td><%= @seminar.title %></td></tr>
-          <tr><th>テーマ</th><td><%= @seminar.theme %></td></tr>
-          <tr><th>参加者氏名 (CDA 会員特定要)</th>
+          <tr><th class="report-th">フリガナ</th><td class="eport-td"></td></tr>
+          <tr><th class="report-th">報告者氏名(幹事)</th><td class="report-td"><%= @seminar.user.name %></td></tr>
+          <tr><th class="report-th">会員番号</th><td class="report-td"><%= @seminar.user.membership_number %></td></tr>
+          <tr><th class="report-th">実施日時</th><td class="report-td"><%= "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%Y-%m-%d %k:%M")}" %></td></tr>
+          <tr><th class="report-th">実施場所</th><td class="report-td"><%= @seminar.place %></td></tr>
+          <tr><th class="report-th">会の名称</th><td class="report-td"><%= @seminar.title %></td></tr>
+          <tr><th class="report-th">テーマ</th><td class="report-td"><%= @seminar.theme %></td></tr>
+          <tr><th class="report-th">参加者氏名 (CDA 会員特定要)</th>
             <% if @seminar.participants.present? %>
-              <td><% @seminar.participants.each do |participant| %>
+              <td class="report-td"><% @seminar.participants.each do |participant| %>
                     <%= "#{participant.membership_number} : #{participant.name}" %><br>
                    <% end %>
               </td><tr>
             <% end %>
         </table>
     </div>
-    <footer>
+    <footer class="report-footer">
       <ul class="footer-contact">
         <li><p>送付先 FAX:03-5645-7170</p></li>
         <li><p>メール: point@j-cda.jp</p></li>
       </ul>
     </footer>
+  </div>
   </body>
 </html>
