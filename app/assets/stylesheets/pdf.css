@@ -1,0 +1,113 @@
+html {
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif'
+}
+
+li{
+  list-style: none;
+}
+
+header{
+  height: 10rem;
+  font-weight: bold;
+}
+
+.kinds {
+  float: right;
+}
+
+.category{
+  display: inline;
+  position: relative;
+  top: -1rem;
+  right: 1rem;
+  border: 1px solid black;
+  font-size: 2.5rem;
+  font-weight: 1000;
+  color: gray;
+}
+
+.alphabet-mark {
+  display: inline;
+  position: relative;
+  top: 1rem;
+  border: 1px solid black;
+  padding: 0.5rem 2rem;
+  font-family: 'Avenir';
+  font-size: 5rem;
+  font-weight: bold;
+} 
+
+.header-contact{
+  position: relative;
+  top: 3rem;
+  left: 35rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.contact {
+  text-align: left;
+}
+
+
+.report-content{
+  margin: 0 5rem;
+  text-align:center;
+}
+address{
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
+.created_on{
+  position: relative;
+  top: -3rem;
+  float: right;
+}
+
+.association {
+  float: left;
+}
+
+/*report-titleとsubtitleを中央揃えにしたい*/
+.report-title{
+  font-size: 3rem;
+  border-bottom: 5px solid black;
+}
+
+.subtitle{
+  font-size: 2rem;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+table, th, td {
+  font-size: 1.5rem;
+  text-align: center;
+  border-collapse: collapse;
+  border: 5px solid black;
+  line-height: 3rem;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  width: 30%;
+  background: whitesmoke;
+}
+
+  /*ページ最下部に固定したい*/
+footer{
+  margin: 0 5rem;
+  bottom: 0;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  background: black;
+  font-weight: bold;
+}
