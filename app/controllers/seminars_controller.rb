@@ -6,6 +6,12 @@ class SeminarsController < ApplicationController
 
   def show
     @seminar = Seminar.find(params[:id])
+    respond_to do |format|
+      format.html
+      firmat.pdf do
+        render pdf: "file_name"
+      end
+    end
   end
 
   def new
