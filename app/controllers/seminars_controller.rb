@@ -8,7 +8,7 @@ class SeminarsController < ApplicationController
     @seminar = Seminar.find(params[:id])
     respond_to do |format|
       format.html
-      firmat.pdf do
+      format.pdf do
         render pdf: "file_name"
       end
     end

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css' %>
+  </head>
+
+  <body>
+    <header>
+      <ul class="header-contact">
+        <li class="contact">FAX:03-5645-7170</li>
+        <li class="contact">メール: point@j-cda.jp</li>
+      </ul>
+
+      <p class="category"><p>活動実施報告書<p>
+      <p class="alphabet-mark">F</p>
+    </header>
+
+    <p class="created_on">西暦<%= Date.today.year %>年 <%= Date.today.month %>月<%= Date.today.day %>日</p>
+    <p>日本キャリア開発協会 御中</p>
+
+    <h1 class="title">活動実施報告書<span>(支部地区会・研究会・ピアトレ・各種勉強会等)</span></h1>
+    <p>下記の通り、活動を行いましたので、報告いたします。</p>
+    <table class="report-table">
+      <tr><th>フリガナ</th><td></td></tr>
+      <tr><th>報告者氏名(幹事)</th><td></td></tr>
+      <tr><th>会員番号</th><td></td></tr>
+      <tr><th>実施日時</th><td><%= @seminar.start_at %></td></tr>
+      <tr><th>実施場所</th><td></td></tr>
+      <tr><th>会の名称</th><td><%= @seminar.title %></td></tr>
+      <tr><th>テーマ</th><td></td></tr>
+      <tr class="participants">
+     <!-- <th>参加者氏名 (CDA 会員特定要)</th> -->
+        <% if @seminar.participants.present? %>
+          <% @seminar.participants.each do |participant| %>
+          <th>参加者氏名 (CDA 会員特定要)</th>
+          <td><%= participant.name %></td><tr>
+          <% end %>
+        <% end %>
+    </table>
+
+    <ul class="footer-contact">
+      <li><p>送付先 FAX:03-5645-7170</p></li>
+      <li><p>メール: point@j-cda.jp</p></li>
+    </ul>
+  </body>
+</html>
