@@ -17,8 +17,15 @@
         <% end%>
         <ul class="header-menus">
           <li class="menu"><%= link_to "#{current_user.name}", user_path(current_user) %></li>
+            <!-- <ul class="submenus">
+              <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
+            </ul> -->
           <li class="menu"><%= link_to 'My Seminars', user_seminars_path(current_user) %>
-          <li class="menu"><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
+            <!-- <ul class="submenus">
+              <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
+              <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
+            </ul> -->
+
           <li class="menu"><%= link_to "Logout", :logout, method: :post %></li>
         </ul>
       <% else %>
