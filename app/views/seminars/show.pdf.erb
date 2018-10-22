@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset='utf-8' />
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css' %>
     <%= wicked_pdf_stylesheet_link_tag "pdf" -%>
     <%= wicked_pdf_javascript_include_tag "number_pages" %>
-    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css' %>
   </head>
-
-  <body>
+  <body onload='number_pages'>
     <header>
       <ul class="kinds">
         <li class="category">活動実施報告書</li>

@@ -9,7 +9,8 @@ class SeminarsController < ApplicationController
     respond_to do |format|
       format.html
       format.pdf do
-        render pdf: "file_name"
+        render pdf: "file_name",
+               title: "#{@seminar.title}"
       end
     end
   end
