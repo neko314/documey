@@ -27,10 +27,8 @@ body {
 }
 
 .header-menus {
-  width: 95%;
   height: 3rem;
   display: flex;
-  padding-right: 2rem;
   justify-content: flex-end;
   align-items: center;
   background: $light-orange;
@@ -41,12 +39,19 @@ body {
   text-align: center;
   a {
     color: $white;
-  }
-  & :hover {
-    color: $salmon;
-    background: $brown;
+    text-decoration: none;
   }
 }
+
+.menu:hover {
+  background: brown;
+  height: 100%;
+  a {
+    color: salmon;
+  }
+
+  }
+
 /*ここまでがヘッダー */
 
 
