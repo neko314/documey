@@ -26,7 +26,7 @@
         <p class="report-title">活動実施報告書<span class="subtitle">(支部地区会・研究会・ピアトレ・各種勉強会等)</span></p>
         <p class="subtext">下記の通り、活動を行いましたので、報告いたします。</p>
         <table class="report-table">
-          <tr><th class="report-th">フリガナ</th><td class="eport-td"></td></tr>
+          <tr><th class="report-th">フリガナ</th><td class="report-td"><%= @seminar.user.kana %></td></tr>
           <tr><th class="report-th">報告者氏名(幹事)</th><td class="report-td"><%= @seminar.user.name %></td></tr>
           <tr><th class="report-th">会員番号</th><td class="report-td"><%= @seminar.user.membership_number %></td></tr>
           <tr><th class="report-th">実施日時</th><td class="report-td"><%= "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%Y-%m-%d %k:%M")}" %></td></tr>
