@@ -1,6 +1,7 @@
 <h1><%= @seminar.title %></h1>
 <h2><%= @seminar.theme %></h2>
 
+<%= link_to 'Generate Seminar PDF', user_seminar_path(current_user, @seminar, format: 'pdf') %>
 <table>
   <thead>
     <tr>

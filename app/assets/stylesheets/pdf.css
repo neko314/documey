@@ -1,0 +1,114 @@
+.report {
+  margin: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+li{
+  list-style: none;
+}
+
+.report-header{
+  height: 400px;
+  font-weight: bold;
+}
+
+.kinds {
+  float: right;
+}
+
+.category{
+  display: inline;
+  position: relative;
+  top: -50px;
+  right: 25px;
+  border: 1px solid black;
+  font-size: 90px;
+  font-weight: 1000;
+  color: gray;
+}
+
+.alphabet-mark {
+  display: inline;
+  position: relative;
+  top: 25px;
+  border: 1px solid black;
+  padding: 10px 100px;
+  font-family: 'Avenir';
+  font-size: 250px;
+  font-weight: bold;
+} 
+
+.header-contact{
+  position: relative;
+  top: 75px;
+  left: 2000px;
+  font-size: 90px;
+  font-weight: 900;
+}
+.contact {
+  text-align: left;
+}
+
+
+.report-content{
+  margin: 0 200px;
+  text-align:center;
+}
+
+.report-address{
+  margin: 0 200px;
+  margin-top: 30px;
+  font-size: 75px;
+}
+
+.created_on{
+  top: -75px;
+  text-align: right;
+}
+
+.association {
+  text-align: left;
+}
+
+.report-title{
+  font-size: 125px;
+  border-bottom: 5px solid black;
+}
+
+.subtitle{
+  font-size: 100px;
+}
+
+.subtext {
+  font-size: 75px;
+  text-align: left;
+}
+
+.report-table, .report-th, .report-td {
+  font-size: 75px;
+  text-align: center;
+  border-collapse: collapse;
+  border: 5px solid black;
+  line-height: 150px;
+}
+
+.report-table {
+  width: 100%;
+}
+
+.report-th {
+  width: 30%;
+  background: whitesmoke;
+}
+
+/*ページ最下部に固定したい*/
+.report-footer{
+  margin: 25px 200px;
+  bottom: 0;
+  font-size: 80px;
+  /* padding: 1px; */
+  text-align: center;
+  color: white;
+  background: black;
+  font-weight: bold;
+}
