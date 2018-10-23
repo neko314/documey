@@ -70,7 +70,6 @@ li{
   text-align: left;
 }
 
-/*report-titleとsubtitleを中央揃えにしたい*/
 .report-title{
   font-size: 125px;
   border-bottom: 5px solid black;
@@ -102,7 +101,7 @@ li{
   background: whitesmoke;
 }
 
-  /*ページ最下部に固定したい*/
+/*ページ最下部に固定したい*/
 .report-footer{
   margin: 25px 200px;
   bottom: 0;
