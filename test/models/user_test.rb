@@ -2,11 +2,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   setup do
-    @user = User.new(name: "testuser",
-                     email: "test@example.com",
-                     password: "password",
-                     password_confirmation: "password",
-                     membership_number: "")
+    @user = users(:user)
   end
   # ユーザー登録時の会員番号のテスト
   test "is valid with 3 large characters and 6 integers" do
