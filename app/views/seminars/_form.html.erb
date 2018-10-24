@@ -1,32 +1,32 @@
 <%= form_with model: [:user, @seminar] do |f| %>
+  <div class="forms">
+    <div class="form">
+      <%= f.label :start_at %>
+      <%= f.datetime_field :start_at %>
+    </div>
 
+    <div class="form">
+      <%= f.label :finish_at %>
+      <%= f.datetime_field :finish_at %>
+    </div>
 
-  <div class="field">
-    <%= f.label :start_at %>
-    <%= f.datetime_field :start_at %>
-  </div>
+    <div class="form">
+      <%= f.label :place %>
+      <%= f.text_field :place %>
+    </div>
 
-  <div class="field">
-    <%= f.label :finish_at %>
-    <%= f.datetime_field :finish_at %>
-  </div>
+    <div class="form">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
 
-  <div class="field">
-    <%= f.label :place %>
-    <%= f.text_field :place %>
-  </div>
+    <div class="form">
+      <%= f.label :theme %>
+      <%= f.text_field :theme %>
+    </div>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :theme %>
-    <%= f.text_field :theme %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>

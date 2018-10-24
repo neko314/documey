@@ -1,5 +1,4 @@
 body {
-  // max-width: 980px;
   background: $beige;
   color: $brown;
   border: solid 8px $light-orange;
@@ -7,8 +6,11 @@ body {
 }
 
 article {
+  display: flex;
   text-align: center;
+  flex-flow: column nowrap;
 }
+
 li {
   list-style: none;
 }
@@ -20,6 +22,7 @@ a {
 h1 {
   text-align: left;
 }
+
 /*ヘッダー*/
 .logo {
   height: 3rem;
@@ -66,6 +69,11 @@ h1 {
 
 .content{
   padding: 1rem;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
 }
 
 table {

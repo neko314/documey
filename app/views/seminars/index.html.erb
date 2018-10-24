@@ -1,7 +1,5 @@
 <h1>Seminars</h1>
 <% if @seminars %>
-  <p>No Seminar</p>
-<% else %>
   <table class="seminars">
     <thead>
       <tr>
@@ -27,6 +25,8 @@
         <% end %>
     </tbody>
   </table>
+<% else %>
+  <p>No Seminar</p>
 <% end %>
 
 <%= link_to 'New Seminar', new_user_seminar_path %>

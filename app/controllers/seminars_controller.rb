@@ -1,7 +1,7 @@
 class SeminarsController < ApplicationController
 
   def index
-    @seminars = Seminar.all
+    @seminars = current_user.seminars
   end
 
   def show
