@@ -1,6 +1,9 @@
+@import "initializers/**/*";
+
 .report {
   margin: 30px;
-  font-family: 'Hiragino Kaku Gothic StdN';
+  line-height: 150px;
+  font-family: 'ipaexg';
 }
 
 li{
@@ -8,7 +11,7 @@ li{
 }
 
 .report-header{
-  height: 400px;
+  height: 450px;
   font-weight: bold;
 }
 
@@ -17,10 +20,11 @@ li{
 }
 
 .category{
+  padding: 10px;
   display: inline;
   position: relative;
-  top: -50px;
-  right: 25px;
+  top: 50px;
+  right: 100px;
   border: 1px solid black;
   font-size: 90px;
   font-weight: 1000;
@@ -30,7 +34,7 @@ li{
 .alphabet-mark {
   display: inline;
   position: relative;
-  top: 25px;
+  top: 150px;
   border: 1px solid black;
   padding: 10px 100px;
   font-family: 'Avenir';
@@ -59,6 +63,7 @@ li{
   margin: 0 200px;
   margin-top: 30px;
   font-size: 75px;
+  line-height: 200px;
 }
 
 .created_on{
@@ -82,6 +87,7 @@ li{
 .subtext {
   font-size: 75px;
   text-align: left;
+  margin: 50px 0;
 }
 
 .report-table, .report-th, .report-td {
@@ -89,7 +95,6 @@ li{
   text-align: center;
   border-collapse: collapse;
   border: 5px solid black;
-  line-height: 150px;
 }
 
 .report-table {
@@ -103,7 +108,7 @@ li{
 
 /*ページ最下部に固定したい*/
 .report-footer{
-  margin: 25px 200px;
+  margin: 50px 200px 0 200px;
   bottom: 0;
   font-size: 80px;
   /* padding: 1px; */
