@@ -1,4 +1,4 @@
-.user-forms{
+.user-forms {
   margin: 0 10rem;
   align-content: center;
 }
@@ -8,8 +8,10 @@
   flex-flow: column nowrap;
   line-height: 2rem;
 }
-.user-form label{
+
+.user-form label {
   text-align: left;
+  font-weight: bold;
 }
 
 .user-form input {
@@ -19,9 +21,8 @@
   padding-left:1rem;
 }
 
-
 .actions {
-  margin: 2rem 10rem;
+  margin-top: 2rem;
   color: white;
   background: salmon;
   border: salmon 1px solid;

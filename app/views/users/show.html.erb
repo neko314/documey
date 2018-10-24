@@ -1,22 +1,27 @@
-<p class="user-info">
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<h1> My Profile</h1>
 
-<p class="user-info">
-  <strong>Kana:</strong>
-  <%= @user.kana %>
-</p>
+<div class="user-infos">
 
-<p class="user-info">
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <ul class="user-info">
+    <li class="user-info-title">Name:</li>
+    <li class="user-info-content"><%= @user.name %></li>
+  </ul>
 
+  <ul class="user-info">
+    <li class="user-info-title">Kana:</li>
+    <li class="user-info-content"><%= @user.kana %></li>
+  </ul>
 
-<p class="user-info">
-  <strong>Membership_number:</strong>
-  <%= @user.membership_number %>
-</p>
+  <ul class="user-info">
+    <li class="user-info-title">Email:</li>
+    <li class="user-info-content"><%= @user.email %></li>
+  </ul>
+
+  <ul class="user-info">
+    <li class="user-info-title">membership number:</li>
+    <li class="user-info-content"><%= @user.membership_number %></li>
+  </ul>
+
+</div>
 
 <%= link_to 'Edit Profite', edit_user_path(@user) %>
