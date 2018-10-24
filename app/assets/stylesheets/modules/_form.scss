@@ -1,0 +1,30 @@
+.user-forms{
+  margin: 0 10rem;
+  align-content: center;
+}
+
+.user-form {
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 2rem;
+}
+.user-form label{
+  text-align: left;
+}
+
+.user-form input {
+  margin: 0.1rem 0;
+  border: solid 1px $brown;
+  background: $light-brown;
+  padding-left:1rem;
+}
+
+
+.actions {
+  margin: 2rem 10rem;
+  color: white;
+  background: salmon;
+  border: salmon 1px solid;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
