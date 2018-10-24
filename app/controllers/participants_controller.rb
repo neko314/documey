@@ -5,6 +5,7 @@ class ParticipantsController < ApplicationController
   end
 
   def new
+    @seminar = Seminar.find(params[:seminar_id])
     @participant = Participant.new
   end
 
