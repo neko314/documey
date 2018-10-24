@@ -36,9 +36,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'sorcery'
 gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
+gem 'sassc-rails'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'xray-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
