@@ -1,18 +1,22 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<p class="user-info">
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
 
-<p>
+<p class="user-info">
+  <strong>Kana:</strong>
+  <%= @user.kana %>
+</p>
+
+<p class="user-info">
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
 
-<p>
+
+<p class="user-info">
   <strong>Membership_number:</strong>
   <%= @user.membership_number %>
 </p>
 
-<%= link_to 'Seminar Index', user_seminars_path(current_user) %>
+<%= link_to 'Edit Profite', edit_user_path(@user) %>
