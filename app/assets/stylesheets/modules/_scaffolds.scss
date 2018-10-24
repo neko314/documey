@@ -1,0 +1,84 @@
+body {
+  // max-width: 980px;
+  background: $beige;
+  color: $brown;
+  border: solid 8px $light-orange;
+  min-height: 100vh;
+}
+
+article {
+  text-align: center;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: left;
+}
+/*ヘッダー*/
+.logo {
+  height: 3rem;
+  width: 3rem;
+  padding-top: 1rem;
+}
+
+#header-nav {
+  background: $beige;
+  padding: 1rem;
+}
+
+.header-menus {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: $light-orange;
+}
+
+.menu {
+  padding: 0 2rem;
+  text-align: center;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+/*選択済みメニューを背景グリーンにしたい*/
+.menu:hover {
+  background: $brown;
+  height: 100%;
+  a {
+    color: $pink;
+  }
+
+  }
+
+/*ここまでがヘッダー */
+
+
+/*コンテンツ*/
+
+.content{
+  padding: 1rem;
+}
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+}
+.seminars th, .seminars td{
+  border: 1px solid $light-brown;
+  padding: 1rem;
+}
+
+.notice{
+  background: $orange;
+  color: $white;
+  text-align: center;
+}

@@ -6,28 +6,44 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.slim.min.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div id="nav">
+    <nav class="header-nav">
       <% if current_user %>
         <%= link_to user_seminars_path(current_user) do%>
           <%= image_tag 'logo.svg', class:"logo" %>
         <% end%>
-        <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-        <%= link_to "Logout", :logout, method: :post %>
+        <ul class="header-menus">
+          <li class="menu"><%= link_to "#{current_user.name}", user_path(current_user) %></li>
+            <!-- <ul class="submenus">
+              <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
+            </ul> -->
+          <li class="menu"><%= link_to 'My Seminars', user_seminars_path(current_user) %>
+            <!-- <ul class="submenus">
+              <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
+              <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
+            </ul> -->
+
+          <li class="menu"><%= link_to "Logout", :logout, method: :post %></li>
+        </ul>
       <% else %>
         <%= link_to "/" do%>
           <%= image_tag 'logo.png' %>
         <% end%>
-        <%= link_to "Register", new_user_path %>
+        <ul class="header-menus">
+          <li class="menu"><%= link_to "Register", new_user_path %></li>
+        </ul>
       <% end %>
-    </div>
-    <div>
-      <p id="notice"><%= flash[:notice] %></p>
+    </nav>
+    <section class="notices">
+      <p class="notice"><%= flash[:notice] %></p>
       <!--<p id="alert"><%= flash[:alert] %></p> -->
-    </div>
-    <%= yield %>
+    </section>
+    <article class="content">
+      <%= yield %>
+    <article class="content">
   </body>
 </html>

@@ -1,0 +1,25 @@
+.user-infos {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.user-info {
+ display: flex;
+ flex-flow: row;
+ justify-content: center;
+ line-height: 2.5rem;
+}
+
+.user-info-title {
+  width: 40%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.user-info-content {
+  width: 60%;
+  padding-left: 2rem;
+  text-align: left;
+}
+

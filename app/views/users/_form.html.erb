@@ -11,32 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
+<div class="user-forms">
+  <div class="user-form">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="user-form">
     <%= f.label :kana %>
     <%= f.text_field :kana %>
   </div>
 
-  <div class="field">
+  <div class="user-form">
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
 
-  <div class="field">
+  <div class="user-form">
     <%= f.label :membership_number %>
     <%= f.text_field :membership_number %>
   </div>
 
-  <div class="field">
+  <div class="user-form">
     <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
 
-  <div class="field">
+  <div class="user-form">
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
@@ -44,4 +45,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>

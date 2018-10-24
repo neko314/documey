@@ -1,18 +1,27 @@
-<p id="notice"><%= notice %></p>
+<h1> My Profile</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<div class="user-infos">
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <ul class="user-info">
+    <li class="user-info-title">Name:</li>
+    <li class="user-info-content"><%= @user.name %></li>
+  </ul>
 
-<p>
-  <strong>Membership_number:</strong>
-  <%= @user.membership_number %>
-</p>
+  <ul class="user-info">
+    <li class="user-info-title">Kana:</li>
+    <li class="user-info-content"><%= @user.kana %></li>
+  </ul>
 
-<%= link_to 'Seminar Index', user_seminars_path(current_user) %>
+  <ul class="user-info">
+    <li class="user-info-title">Email:</li>
+    <li class="user-info-content"><%= @user.email %></li>
+  </ul>
+
+  <ul class="user-info">
+    <li class="user-info-title">membership number:</li>
+    <li class="user-info-content"><%= @user.membership_number %></li>
+  </ul>
+
+</div>
+
+<%= link_to 'Edit Profite', edit_user_path(@user) %>
