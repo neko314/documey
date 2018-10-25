@@ -28,7 +28,10 @@
               <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
             </ul> -->
 
-          <li class="menu"><%= link_to "Logout", :logout, method: :post %></li>
+          <li class="menu"><%= link_to  :logout, method: :post do %>
+            <i class="fas fa-sign-out-alt">Logout</i>
+            <% end %>
+          </li>
         </ul>
       <% else %>
         <%= link_to "/" do%>
