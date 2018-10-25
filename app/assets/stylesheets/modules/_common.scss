@@ -71,18 +71,14 @@ h1 {
   padding: 1rem;
 }
 
-label {
-  text-align: left;
-  font-weight: bold;
-}
-
 table {
   text-align: center;
   border-collapse: collapse;
 }
-.seminars th, .seminars td{
-  border: 1px solid $light-brown;
-  padding: 1rem;
+
+label {
+  text-align: left;
+  font-weight: bold;
 }
 
 .notice{

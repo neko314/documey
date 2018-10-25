@@ -1,14 +1,16 @@
-<h1 class="title"><%= @seminar.title %></h1>
-<h2 class="theme"><%= @seminar.theme %></h2>
+<h1>Seminar</h1>
+<table class="title-theme">
+  <tr><th>Title</th><td class="seminar-title"> <%= @seminar.title %></td></tr>
+  <tr><th>Theme</th><td class="seminar-theme"> <%= @seminar.theme %></td></tr>
+</table>
 
 <%= link_to 'Generate Seminar PDF', user_seminar_path(current_user, @seminar, format: 'pdf') %>
-<table>
+<table class="seminar-info">
   <thead>
     <tr>
       <th>Start_at</th>
       <th>Finish_at</th>
       <th>Place</th>
-      <th>User</th>
     </tr>
   </thead>
 
@@ -17,14 +19,13 @@
         <td><%= @seminar.start_at.strftime("%Y-%m-%d %k:%M") %></td>
         <td><%= @seminar.finish_at.strftime("%Y-%m-%d %k:%M") %></td>
         <td><%= @seminar.place %></td>
-        <td><%= @seminar.user.name %></td>
       </tr>
   </tbody>
 </table>
 
-<h3>Participants</h3>
+<h3 class="seminar-participants">Participants</h3>
 <% if @seminar.participants.any? %>
-  <table>
+  <table class="seminar-participants">
     <tr>
       <th>MenbershipNumber</th>
       <th>Name</th>
@@ -41,9 +42,6 @@
 <% else %>
   <p>No participant</p>
 <% end %>
+
 <%= link_to 'New Participant', new_user_seminar_participant_path(current_user, @seminar) %>
-
-<td><%= link_to 'Edit Seminar', edit_user_seminar_path(@seminar) %></td>
-<br>
-
 <%= link_to 'New Seminar', new_user_seminar_path %>
