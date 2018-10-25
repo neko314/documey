@@ -43,7 +43,14 @@
           <%= image_tag 'logo.png' %>
         <% end%>
         <ul class="header-menus">
-          <li class="menu"><%= link_to "Register", new_user_path %></li>
+          <li class="menu"><%= link_to new_user_session_path do %>
+            <i class="fas fa-sign-in-alt">Log In</i>
+            <% end %>
+          </li>
+          <li class="menu"><%= link_to new_user_path do %>
+            <i class="fas fa-user-plus">Sign Up</i>
+            <% end %>
+          </li>
         </ul>
       <% end %>
     </nav>
