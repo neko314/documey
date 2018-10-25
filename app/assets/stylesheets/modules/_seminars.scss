@@ -1,0 +1,40 @@
+.title-theme {
+  display: flex;
+  justify-content: center; 
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.title-theme th {
+  padding-right: 0.5rem;
+  text-align: right;
+}
+
+.title-theme td {
+  text-align: left;
+}
+
+.seminar-info {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.seminar-info th {
+  width: 33%;
+}
+
+.seminar-participants h3{
+  font-size: 1.5rem;
+}
+
+
+.seminar-participants table {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.seminar-participants th,
+.seminar-participants td {
+  border: 1px solid $light-brown;
+  padding: 0.5rem;
+}
