@@ -28,6 +28,9 @@
       </tr>
   </tbody>
 </table>
+<%= link_to edit_user_seminar_path(current_user, @seminar) do %>
+  <i class="fas fa-edit">Edit Seminar</i>
+<% end %>
 
 <h3 class="seminar-participants">Participants</h3>
 <% if @seminar.participants.any? %>
