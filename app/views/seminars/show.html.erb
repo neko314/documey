@@ -4,7 +4,10 @@
   <tr><th>Theme</th><td class="seminar-theme"> <%= @seminar.theme %></td></tr>
 </table>
 
-<%= link_to 'Generate Seminar PDF', user_seminar_path(current_user, @seminar, format: 'pdf') %>
+
+  <%= link_to user_seminar_path(current_user, @seminar, format: 'pdf') do %>
+    <i class="far fa-file-pdf">Generate Report PDF</i>
+  <% end%>
 <table class="seminar-info">
   <thead>
     <tr>
