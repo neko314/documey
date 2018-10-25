@@ -22,4 +22,6 @@
   </ul>
 </div>
 
-<%= link_to 'Edit Profite', edit_user_path(@user) %>
+<%= link_to edit_user_path(@user) do %>
+  <i class="fas fa-user-edit">Edit Profile</i>
+<% end %>
