@@ -18,18 +18,23 @@
           <%= image_tag 'logo.svg', class:"logo" %>
         <% end%>
         <ul class="header-menus">
-          <li class="menu"><%= link_to "#{current_user.name}", user_path(current_user) %></li>
+          <li class="menu"><%= link_to user_path(current_user) do %>
+            <i class="fas fa-user"><%= "#{current_user.name}" %></i>
+            <% end %>
+          </li>
             <!-- <ul class="submenus">
               <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
             </ul> -->
-          <li class="menu"><%= link_to 'My Seminars', user_seminars_path(current_user) %>
+          <li class="menu"><%= link_to user_seminars_path(current_user) do %>
+            <i class="fas fa-users">My Seminars</i>
+          <% end %>
             <!-- <ul class="submenus">
               <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
               <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
             </ul> -->
 
           <li class="menu"><%= link_to  :logout, method: :post do %>
-            <i class="fas fa-sign-out-alt">Logout</i>
+            <i class="fas fa-sign-out-alt">Log Out</i>
             <% end %>
           </li>
         </ul>
