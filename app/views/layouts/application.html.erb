@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'https://code.jquery.com/jquery-3.3.1.slim.min.js', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
   </head>
 
   <body>
@@ -17,24 +18,39 @@
           <%= image_tag 'logo.svg', class:"logo" %>
         <% end%>
         <ul class="header-menus">
-          <li class="menu"><%= link_to "#{current_user.name}", user_path(current_user) %></li>
+          <li class="menu"><%= link_to user_path(current_user) do %>
+            <i class="fas fa-user"><%= "#{current_user.name}" %></i>
+            <% end %>
+          </li>
             <!-- <ul class="submenus">
               <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
             </ul> -->
-          <li class="menu"><%= link_to 'My Seminars', user_seminars_path(current_user) %>
+          <li class="menu"><%= link_to user_seminars_path(current_user) do %>
+            <i class="fas fa-chalkboard-teacher">My Seminars</i>
+          <% end %>
             <!-- <ul class="submenus">
               <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
               <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
             </ul> -->
 
-          <li class="menu"><%= link_to "Logout", :logout, method: :post %></li>
+          <li class="menu"><%= link_to  :logout, method: :post do %>
+            <i class="fas fa-sign-out-alt">Log Out</i>
+            <% end %>
+          </li>
         </ul>
       <% else %>
         <%= link_to "/" do%>
           <%= image_tag 'logo.png' %>
         <% end%>
         <ul class="header-menus">
-          <li class="menu"><%= link_to "Register", new_user_path %></li>
+          <li class="menu"><%= link_to new_user_session_path do %>
+            <i class="fas fa-sign-in-alt">Log In</i>
+            <% end %>
+          </li>
+          <li class="menu"><%= link_to new_user_path do %>
+            <i class="fas fa-user-plus">Sign Up</i>
+            <% end %>
+          </li>
         </ul>
       <% end %>
     </nav>
