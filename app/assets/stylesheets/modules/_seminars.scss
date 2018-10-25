@@ -1,3 +1,11 @@
+// セミナー一覧
+.seminars th,
+.seminars td {
+  border: 1px solid $light-brown;
+  padding: 1rem;
+}
+
+// セミナー個別ページ
 .title-theme {
   display: flex;
   justify-content: center; 
