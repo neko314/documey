@@ -33,6 +33,7 @@
 <% end %>
 
 <h3 class="seminar-participants"><i class="fas fa-users">Participants</i></h3>
+ <%= link_to "参加者一覧", user_seminar_participants_path(current_user, @seminar, format: 'pdf') %>
 <% if @seminar.participants.any? %>
   <table class="seminar-participants">
     <tr>
