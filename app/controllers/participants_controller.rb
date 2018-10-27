@@ -1,4 +1,20 @@
 class ParticipantsController < ApplicationController
+
+  def index
+    @seminar = Seminar.find(params[:seminar_id])
+    @particepants = @seminar.participants
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "file_name",
+               title: "#{@seminar.title}",
+               encoding: 'UTF-8',
+               show_as_html: params.key?('debug'),
+               page_size: 'A4'
+      end
+    end
+  end
+
   def show
     @seminar = Seminar.find(params[:seminar_id])
     @participant = Participant.find(params[:id])
