@@ -8,7 +8,9 @@ class ParticipantsController < ApplicationController
       format.pdf do
         render pdf: "file_name",
                title: "#{@seminar.title}",
-               encoding: 'UTF-8'
+               encoding: 'UTF-8',
+               show_as_html: params.key?('debug'),
+               page_size: 'A4'
       end
     end
   end

@@ -1,1 +1,46 @@
-<h1>参加証明書</h1>
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' >
+    <%= wicked_pdf_stylesheet_link_tag "certification" %>
+    <%= wicked_pdf_javascript_include_tag "number_pages" %>
+  </head>
+  <body onload='number_pages'>
+    <header>
+      <ul class="cert-header">
+        <li><%= wicked_pdf_image_tag 'jcda.png' %></li>
+        <li class="alphabet"><p>E</p></li>
+      </ul>
+    </header>
+    <ul class="number">
+      <li class="association">特定非営利活動法人 日本キャリア開発協会</li>
+      <li class="no">NO</li>
+    </ul>
+    <div class="contents">
+        <h1 class="title">参加証明書<span class="subtitle">（JCDA/支部/地区会・研究会・ピアトレ・各種勉強会）</span>
+        <p>下記の内容で、参加したことを証明します。</p>
+        <table>
+          <tr><th>氏名</th><td>なまえ</td></tr>
+          <tr><th>会員番号</th><td>なまえ</td></tr>
+          <tr><th>取得ポイント</th><td>なまえ</td></tr>
+          <tr><th>日時</th><td>なまえ</td></tr>
+          <tr><th>場所</th><td>なまえ</td></tr>
+          <tr><th>勉強会名称</th><td>なまえ</td></tr>
+          <tr><th>内容</th><td>なまえ</td></tr>
+          <tr><th></th><td class="create_on"><%= "#{Date.today.year}年 #{Date.today.month}月 #{Date.today.day}日" %></td></tr>
+          <tr><th>開催責任者（幹事）：</th><td><%= @seminar.user.name %></td></tr>
+        </table>
+      <p class="organizer">（実施報告書の FAX 受領により、幹事署名は必須ではなく、無署名でも有効です。）</p>
+      
+      <footer>
+        <ul>
+          <li>★更新ポイントの申告は自己申告制です。
+          <li>【CDA 資格取得(入会)月】 【更新ポイント申告期間】</li>
+          <li>・１０月度会員（4 月～9 月入会） ⇒ 10 月 1 日～10 月 31 日</li>
+          <li>・４月度会員（10 月～3 月入会） ⇒ 4 月 1 日～4 月 30 日</li>
+          <li>※詳細はホームページ（http://www.j-cda.jp）にてご確認ください。</li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

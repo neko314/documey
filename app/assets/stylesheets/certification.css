@@ -1,0 +1,86 @@
+@import "initializers/**/*";
+
+body {
+  padding: 5rem 10rem;
+}
+
+li {
+  list-style: none;
+}
+
+image {
+  float: left;
+}
+
+header {
+  height: 12rem;
+}
+
+.alphabet {
+  float: right;
+  border: 1px solid black;
+  padding: 0 6rem;
+  font-size: 3rem;
+}
+
+.number {
+  height: 10rem;
+}
+.association {
+  text-align: right;
+  line-height: 5rem;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+}
+
+.no {
+  line-height: 5rem;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+  float: right;
+}
+
+.contents {
+  border: 1px solid black;
+  padding: 5rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
+
+table, th, td {
+  font-size: 2rem;
+  margin: auto;
+  line-height: 6rem;
+  /* width: 90%; */
+}
+
+table {
+  width: 90%;
+}
+
+th {
+  width: 40%;
+}
+
+td {
+  border-bottom: 1px solid black;
+}
+
+.create_on {
+  border: none;
+  text-align: right;
+}
+
+footer {
+  margin-top: 10rem;
+  text-align: left;
+  line-height: 5rem;
+}
