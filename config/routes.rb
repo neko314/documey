@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :seminars do
       resources :participants
+      get 'mail' => 'seminars#mail'
     end 
   end
 

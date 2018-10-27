@@ -41,6 +41,7 @@ gem 'sassc-rails'
 group :development, :test do
   gem 'sqlite3'
   gem 'xray-rails'
+  gem 'mailcatcher'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
