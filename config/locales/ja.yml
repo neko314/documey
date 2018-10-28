@@ -51,7 +51,8 @@ ja:
   Fail_to_update_participant: 参加者情報の更新に失敗しました
   Delete_particepant: 参加者を削除しました
   Are_you_sure?: 本当に削除しますか？
-  
+  Sent_report_successfully: 活動実施報告書を送付しました
+
   activerecord:
     models:
       user: ユーザー

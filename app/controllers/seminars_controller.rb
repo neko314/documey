@@ -52,7 +52,7 @@ class SeminarsController < ApplicationController
   def mail
     @seminar = Seminar.find(params[:seminar_id])
     ReportMailer.with(user: current_user, seminar: @seminar).report_mail.deliver
-    redirect_to [current_user, @seminar], notice: "Send report successfully"
+    redirect_to [current_user, @seminar], notice: t("Sent_report_successfully")
   end
 
   private
