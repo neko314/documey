@@ -26,7 +26,7 @@
               <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
             </ul> -->
           <li class="menu"><%= link_to user_seminars_path(current_user) do %>
-            <i class="fas fa-chalkboard-teacher">My Seminars</i>
+            <i class="fas fa-chalkboard-teacher"><%= t :My_Seminars %></i>
           <% end %>
             <!-- <ul class="submenus">
               <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
@@ -34,7 +34,7 @@
             </ul> -->
 
           <li class="menu"><%= link_to  :logout, method: :post do %>
-            <i class="fas fa-sign-out-alt">Log Out</i>
+            <i class="fas fa-sign-out-alt"><%= t :Log_Out %></i>
             <% end %>
           </li>
         </ul>
@@ -44,11 +44,11 @@
         <% end%>
         <ul class="header-menus">
           <li class="menu"><%= link_to new_user_session_path do %>
-            <i class="fas fa-sign-in-alt">Log In</i>
+            <i class="fas fa-sign-in-alt"><%= t :Log_In %></i>
             <% end %>
           </li>
           <li class="menu"><%= link_to new_user_path do %>
-            <i class="fas fa-user-plus">Sign Up</i>
+            <i class="fas fa-user-plus"><%= t :Sign_Up %></i>
             <% end %>
           </li>
         </ul>

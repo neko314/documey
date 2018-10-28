@@ -1,0 +1,67 @@
+ja:
+  Log_In: ログイン
+  Log_Out: ログアウト
+  Sign_Up: サインアップ
+  My_Seminars: 勉強会
+  Show: 詳細
+  Back: 戻る
+  New_User: ユーザー登録
+  My_Profile: プロフィール
+  Edit_Profile: プロフィール編集
+  Destroy_User: アカウント削除
+  Name: 氏名
+  Kana: フリガナ
+  Email: Eメール
+  Password: パスワード
+  Membership_Number: 会員番号
+  Seminars: 勉強会一覧
+  Seminar: 勉強会詳細
+  New_Seminar: 勉強会登録
+  Edit_Seminar: 勉強会編集
+  Start_at: 開始日時
+  Finish_at: 終了日時
+  Place: 場所
+  Title: タイトル
+  Theme: テーマ
+  No_Seminar: 勉強会はありません
+  New_Parcitipant: 参加者登録
+  Participants: 参加者一覧
+  Participant: 参加者情報
+  New_Participant: 参加者登録
+  Edit_Participant: 参加者情報編集
+  Show_Participant: 参加者詳細
+  Generate_Report_PDF: 活動実施報告書PDFを作成
+  Send_Report_to_Association: 協会に活動実施報告書を送付
+  Generate_Certification_PDF: 参加証明書PDFを作成
+
+  activerecord:
+    models:
+      user: ユーザー
+      seminar: 勉強会
+      participant: 参加者
+
+    attributes:
+      user:
+        name: 氏名
+        kana: フリガナ
+        Email: Eメール
+        membership_number: 会員番号
+        password: パスワード
+        password_confirmation: パスワード（確認用）
+
+      user_session:
+        Email: Eメール
+        password: パスワード
+
+      seminar:
+        start_at: 開始日時
+        finish_at: 終了日時
+        place: 場所
+        title: タイトル
+        theme: テーマ
+
+      participant:
+        name: 氏名
+        kana: フリガナ
+        Email: Eメール
+        membership_number: 会員番号

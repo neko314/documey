@@ -1,13 +1,13 @@
-<h1><i class="fas fa-chalkboard-teacher">Seminars</i></h1>
+<h1><i class="fas fa-chalkboard-teacher"><%= t :Seminars %></i></h1>
 <% if @seminars %>
   <table class="seminars">
     <thead>
       <tr>
-        <th>Start_at</th>
-        <th>Finish_at</th>
-        <th>Place</th>
-        <th>Title</th>
-        <th>Theme</th>
+        <th><%= t :Start_at %></th>
+        <th><%= t :Finish_at %></th>
+        <th><%= t :Place %></th>
+        <th><%= t :Title %></th>
+        <th><%= t :Theme %></th>
         <th colspan="1"></th>
       </tr>
     </thead>
@@ -20,13 +20,13 @@
             <td><%= seminar.place %></td>
             <td><%= seminar.title %></td>
             <td><%= seminar.theme %></td>
-            <td><%= link_to 'Show', user_seminar_path(current_user, seminar) %></td>
+            <td><%= link_to t('Show'), user_seminar_path(current_user, seminar) %></td>
           </tr>
         <% end %>
     </tbody>
   </table>
 <% else %>
-  <p>No Seminar</p>
+  <p><%= t :No_Seminar %></p>
 <% end %>
 
-<%= link_to 'New Seminar', new_user_seminar_path %>
+<%= link_to t('New_Seminar'), new_user_seminar_path %>

@@ -1,27 +1,27 @@
-<h1> My Profile</h1>
+<h1><%= t :My_Profile %></h1>
 
 <div class="user-infos">
   <ul class="user-info">
-    <li class="user-info-title">Name:</li>
+    <li class="user-info-title"><%= t :Name %>:</li>
     <li class="user-info-content"><%= @user.name %></li>
   </ul>
 
   <ul class="user-info">
-    <li class="user-info-title">Kana:</li>
+    <li class="user-info-title"><%= t :Kana %>:</li>
     <li class="user-info-content"><%= @user.kana %></li>
   </ul>
 
   <ul class="user-info">
-    <li class="user-info-title">Email:</li>
+    <li class="user-info-title"><%= t :Email %>:</li>
     <li class="user-info-content"><%= @user.email %></li>
   </ul>
 
   <ul class="user-info">
-    <li class="user-info-title">membership number:</li>
+    <li class="user-info-title"><%= t :Membership_Number %>:</li>
     <li class="user-info-content"><%= @user.membership_number %></li>
   </ul>
 </div>
 
 <%= link_to edit_user_path(@user) do %>
-  <i class="fas fa-user-edit">Edit Profile</i>
+  <i class="fas fa-user-edit"><%= t :Edit_Profile %></i>
 <% end %>
