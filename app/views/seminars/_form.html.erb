@@ -1,4 +1,16 @@
-<%= form_with model: [:user, @seminar] do |f| %>
+<%= form_with(model: [:user, @seminar], local: true) do |f| %>
+  <% if seminar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(seminar.errors.count, "error") %> prohibited this seminar from being saved:</h2>
+
+      <ul>
+      <% seminar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="forms">
     <div class="form">
       <%= f.label :start_at %>

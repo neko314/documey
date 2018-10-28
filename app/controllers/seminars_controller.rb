@@ -11,7 +11,7 @@ class SeminarsController < ApplicationController
       format.pdf do
         render pdf: "file_name",
                title: "#{@seminar.title}",
-               encoding: 'UTF-8'
+               encoding: "UTF-8"
       end
     end
   end
@@ -28,31 +28,33 @@ class SeminarsController < ApplicationController
     @seminar = Seminar.new(seminar_params)
     @seminar.user_id = current_user.id
     if @seminar.save
-      redirect_to user_seminar_path(current_user, @seminar), notice: "create new seminar"
+      redirect_to user_seminar_path(current_user, @seminar), notice: t("Created_new_seminar_successfully")
     else
-      redirect_to new_user_seminar_path, notice: "fail to create seminar"
+      flash.now[:alert] = t("Failed_to_create_new_seminar")
+      render "new"
     end
   end
 
   def update
     @seminar = Seminar.find(params[:id])
     if @seminar.update(seminar_params)
-      redirect_to user_seminar_path(current_user, @seminar), notice: "update seminar"
+      redirect_to user_seminar_path(current_user, @seminar), notice: t("Updated_seminar")
     else
-      redirect_to edit_user_seminar_path, notice: "fail to update seminar"
+      flash.now[:alert] = t("Failed_to_update_seminar")
+      render "edit"
     end
   end
 
   def destroy
     @seminar = Seminar.find(params[:id])
     @seminar.destroy
-    redirect_to user_seminars_path(current_user), notice: "delete seminar"
+    redirect_to user_seminars_path(current_user), notice: t("Delete_seminar")
   end
 
   def mail
     @seminar = Seminar.find(params[:seminar_id])
     ReportMailer.with(user: current_user, seminar: @seminar).report_mail.deliver
-    redirect_to [current_user, @seminar], notice: "Send report successfully"
+    redirect_to [current_user, @seminar], notice: t("Sent_report_successfully")
   end
 
   private

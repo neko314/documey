@@ -82,7 +82,15 @@ label {
 }
 
 .notice{
+  background: $green;
+  color: $white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.alert {
   background: $orange;
   color: $white;
   text-align: center;
+  font-weight: bold;
 }

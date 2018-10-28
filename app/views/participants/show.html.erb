@@ -1,20 +1,20 @@
-<h1><i class="fas fa-users">Participant</i></h1>
+<h1><i class="fas fa-users"><%= t :Participant %></i></h1>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t :Name %>:</strong>
   <%= @participant.name %>
 </p>
 
 <p>
-  <strong>Membership_number:</strong>
+  <strong><%= t :Membership_Number %>:</strong>
   <%= @participant.membership_number %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong><%= t :Email %>:</strong>
   <%= @participant.email %>
 </p>
 
-<%= link_to 'Seminar', user_seminar_path(current_user, @seminar) %>
+<%= link_to t('Seminar'), user_seminar_path(current_user, @seminar) %>
 
-<%= link_to 'Edit', edit_user_seminar_participant_path(current_user, @seminar, @participant) %>
+<%= link_to t('Edit_Participant'), edit_user_seminar_participant_path(current_user, @seminar, @participant) %>
