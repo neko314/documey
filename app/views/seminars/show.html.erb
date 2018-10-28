@@ -54,7 +54,7 @@
     <% end %>
   </table>
 <% else %>
-  <p>No participant</p>
+  <p><%= t :No_participant %></p>
 <% end %>
 
 <%= link_to t('New_Participant'), new_user_seminar_participant_path(current_user, @seminar) %>

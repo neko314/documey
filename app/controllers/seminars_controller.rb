@@ -28,25 +28,25 @@ class SeminarsController < ApplicationController
     @seminar = Seminar.new(seminar_params)
     @seminar.user_id = current_user.id
     if @seminar.save
-      redirect_to user_seminar_path(current_user, @seminar), notice: "create new seminar"
+      redirect_to user_seminar_path(current_user, @seminar), notice: t("Created_new_seminar_successfully")
     else
-      redirect_to new_user_seminar_path, notice: "fail to create seminar"
+      redirect_to new_user_seminar_path
     end
   end
 
   def update
     @seminar = Seminar.find(params[:id])
     if @seminar.update(seminar_params)
-      redirect_to user_seminar_path(current_user, @seminar), notice: "update seminar"
+      redirect_to user_seminar_path(current_user, @seminar), notice: t("Updated_seminar")
     else
-      redirect_to edit_user_seminar_path, notice: "fail to update seminar"
+      redirect_to edit_user_seminar_path
     end
   end
 
   def destroy
     @seminar = Seminar.find(params[:id])
     @seminar.destroy
-    redirect_to user_seminars_path(current_user), notice: "delete seminar"
+    redirect_to user_seminars_path(current_user), notice: t("Delete_seminar")
   end
 
   def mail

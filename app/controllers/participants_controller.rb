@@ -35,9 +35,9 @@ class ParticipantsController < ApplicationController
     @seminar = Seminar.find(params[:seminar_id])
     @participant.seminar_id = @seminar.id
     if @participant.save
-      redirect_to user_seminar_path(current_user, @seminar), notice: "create participant"
+      redirect_to user_seminar_path(current_user, @seminar), notice: t("Created_participant_successfully")
     else
-      redirect_to edit_user_seminar_participant_path(current_user, @seminar), notice: "fail to create participant"
+      render :new, notice: t("Failed_to_create_participant")
     end
   end
 
@@ -45,9 +45,9 @@ class ParticipantsController < ApplicationController
     @seminar = Seminar.find(params[:seminar_id])
     @participant = Participant.find(params[:id])
     if @participant.update(participant_params)
-      redirect_to user_seminar_path(current_user, @seminar), notice: "update participant"
+      redirect_to user_seminar_path(current_user, @seminar), notice: t("Update_participant")
     else 
-      redirect_to edit_user_seminar_participant_path, notice: "fail to update participant"
+      redirect_to edit_user_seminar_participant_path, notice: t("Fail_to_update_participant")
     end
   end
 
@@ -55,7 +55,7 @@ class ParticipantsController < ApplicationController
     @seminar = Seminar.find(params[:seminar_id])
     @participant = Participant.find(params[:id])
     @participant.destroy
-    redirect_to user_seminar_path(current_user, @seminar), notice: "delete particepant"
+    redirect_to user_seminar_path(current_user, @seminar), notice: t("Delete_particepant")
   end
 
   private
