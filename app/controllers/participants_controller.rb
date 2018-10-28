@@ -37,7 +37,8 @@ class ParticipantsController < ApplicationController
     if @participant.save
       redirect_to user_seminar_path(current_user, @seminar), notice: t("Created_participant_successfully")
     else
-      render :new, notice: t("Failed_to_create_participant")
+      flash.now[:alert] = t("Failed_to_create_participant")
+      render "new"
     end
   end
 
@@ -45,9 +46,10 @@ class ParticipantsController < ApplicationController
     @seminar = Seminar.find(params[:seminar_id])
     @participant = Participant.find(params[:id])
     if @participant.update(participant_params)
-      redirect_to user_seminar_path(current_user, @seminar), notice: t("Update_participant")
-    else 
-      redirect_to edit_user_seminar_participant_path, notice: t("Fail_to_update_participant")
+      redirect_to user_seminar_path(current_user, @seminar), notice: t("Updated_participant")
+    else
+      flash.now[:alert] = t("Failed_to_update_participant")
+      render "edit"
     end
   end
 

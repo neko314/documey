@@ -43,12 +43,14 @@ ja:
   User_was_successfully_updated: プロフィールを更新しました
   User_was_successfully_destroyed: アカウントを削除しました
   Created_new_seminar_successfully: 勉強会を登録しました
+  Failed_to_create_new_seminar: 勉強会の登録に失敗しました
   Updated_seminar: 勉強会情報を更新しました
+  Failed_to_update_seminar: 勉強会情報の更新に失敗しました
   Delete_seminar: 勉強会を削除しました
   Created_participant_successfully: 参加者を登録しました
   Failed_to_create_participant: 参加者の登録に失敗しました
-  Update_participant: 参加者情報を更新しました
-  Fail_to_update_participant: 参加者情報の更新に失敗しました
+  Updated_participant: 参加者情報を更新しました
+  Failed_to_update_participant: 参加者情報の更新に失敗しました
   Delete_particepant: 参加者を削除しました
   Are_you_sure?: 本当に削除しますか？
   Sent_report_successfully: 活動実施報告書を送付しました

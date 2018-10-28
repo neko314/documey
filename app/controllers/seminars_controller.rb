@@ -30,7 +30,8 @@ class SeminarsController < ApplicationController
     if @seminar.save
       redirect_to user_seminar_path(current_user, @seminar), notice: t("Created_new_seminar_successfully")
     else
-      redirect_to new_user_seminar_path
+      flash.now[:alert] = t("Failed_to_create_new_seminar")
+      render "new"
     end
   end
 
@@ -39,7 +40,8 @@ class SeminarsController < ApplicationController
     if @seminar.update(seminar_params)
       redirect_to user_seminar_path(current_user, @seminar), notice: t("Updated_seminar")
     else
-      redirect_to edit_user_seminar_path
+      flash.now[:alert] = t("Failed_to_update_seminar")
+      render "edit"
     end
   end
 
