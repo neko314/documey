@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :seminars do
       resources :participants
       get 'mail' => 'seminars#mail'
+      get 'certification' => 'participants#certification'
     end 
   end
 

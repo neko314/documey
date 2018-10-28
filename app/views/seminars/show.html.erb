@@ -34,7 +34,7 @@
 
 <h3 class="seminar-participants"><i class="fas fa-users"><%= t :Participants %></i></h3>
 
-<%= link_to user_seminar_participants_path(current_user, @seminar, format: "pdf") do %>
+<%= link_to user_seminar_certification_path(current_user, @seminar, format: "pdf") do %>
   <i class="far fa-file-pdf"><%= t :Generate_Certification_PDF %></i>
 <% end%>
 
