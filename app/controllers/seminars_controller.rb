@@ -11,7 +11,7 @@ class SeminarsController < ApplicationController
       format.pdf do
         render pdf: "file_name",
                title: "#{@seminar.title}",
-               encoding: 'UTF-8'
+               encoding: "UTF-8"
       end
     end
   end

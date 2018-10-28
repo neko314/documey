@@ -20,7 +20,7 @@
             <td><%= seminar.place %></td>
             <td><%= seminar.title %></td>
             <td><%= seminar.theme %></td>
-            <td><%= link_to t('Show'), user_seminar_path(current_user, seminar) %></td>
+            <td><%= link_to t("Show"), user_seminar_path(current_user, seminar) %></td>
           </tr>
         <% end %>
     </tbody>
@@ -29,4 +29,4 @@
   <p><%= t :No_Seminar %></p>
 <% end %>
 
-<%= link_to t('New_Seminar'), new_user_seminar_path %>
+<%= link_to t("New_Seminar"), new_user_seminar_path %>

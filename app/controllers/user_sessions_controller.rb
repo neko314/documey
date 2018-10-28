@@ -14,7 +14,7 @@ class UserSessionsController < ApplicationController
       redirect_to user_seminars_path(@user), notice: t("Login_successful")
     else
       flash.now[:alert] = t("Login_failed")
-      render action: 'new'
+      render action: "new"
     end
   end
 

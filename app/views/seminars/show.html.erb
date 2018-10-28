@@ -5,7 +5,7 @@
 </table>
 
 
-  <%= link_to user_seminar_path(current_user, @seminar, format: 'pdf') do %>
+  <%= link_to user_seminar_path(current_user, @seminar, format: "pdf") do %>
     <i class="far fa-file-pdf"><%= t :Generate_Report_PDF %></i>
   <% end%>
   <%= link_to user_seminar_mail_path(current_user, @seminar) do %>
@@ -34,7 +34,7 @@
 
 <h3 class="seminar-participants"><i class="fas fa-users"><%= t :Participants %></i></h3>
 
-<%= link_to user_seminar_participants_path(current_user, @seminar, format: 'pdf') do %>
+<%= link_to user_seminar_participants_path(current_user, @seminar, format: "pdf") do %>
   <i class="far fa-file-pdf"><%= t :Generate_Certification_PDF %></i>
 <% end%>
 
@@ -49,7 +49,7 @@
     <tr>
       <td><%= p.membership_number %></td>
       <td><%= p.name %></td>
-      <td><%= link_to t('Show_Participant'), user_seminar_participant_path(current_user, @seminar, p) %></td>
+      <td><%= link_to t("Show_Participant"), user_seminar_participant_path(current_user, @seminar, p) %></td>
     </tr>
     <% end %>
   </table>
@@ -57,5 +57,5 @@
   <p><%= t :No_participant %></p>
 <% end %>
 
-<%= link_to t('New_Participant'), new_user_seminar_participant_path(current_user, @seminar) %>
-<%= link_to t('New_Seminar'), new_user_seminar_path %>
+<%= link_to t("New_Participant"), new_user_seminar_participant_path(current_user, @seminar) %>
+<%= link_to t("New_Seminar"), new_user_seminar_path %>
