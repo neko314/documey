@@ -1,9 +1,5 @@
 @import "initializers/**/*";
 
-body {
-  padding: 5rem 10rem;
-}
-
 li {
   list-style: none;
 }
@@ -59,7 +55,6 @@ table, th, td {
   font-size: 2rem;
   margin: auto;
   line-height: 6rem;
-  /* width: 90%; */
 }
 
 table {
@@ -83,4 +78,12 @@ footer {
   margin-top: 10rem;
   text-align: left;
   line-height: 5rem;
+}
+
+.page-break {
+  page-break-after: always;
+
+  &:last-child {
+    page-break-after: avoid;
+  }
 }
