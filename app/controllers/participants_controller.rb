@@ -66,9 +66,12 @@ class ParticipantsController < ApplicationController
   end
 
   def send_certification_mail
-    user = current_user
+    @user = current_user
     @seminar = Seminar.find(params[:seminar_id])
-    CertificationMailer.with(user: user, seminar: @seminar).certification_mail.deliver
+    @seminar.participants.each do |p|
+      @participant = p
+      CertificationMailer.with(user: @user, seminar: @seminar, participant: @participant).certification_mail.deliver
+    end
     redirect_to [current_user, @seminar], notice: t("Sent_certification_successfully")
   end
 
