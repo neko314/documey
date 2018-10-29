@@ -9,6 +9,7 @@ article {
   display: flex;
   text-align: center;
   flex-flow: column nowrap;
+  justify-content: center;
 }
 
 li {
@@ -23,7 +24,6 @@ h1 {
   text-align: left;
 }
 
-/*ヘッダー*/
 .logo {
   height: 3rem;
   width: 3rem;
@@ -52,7 +52,6 @@ h1 {
   }
 }
 
-/*選択済みメニューを背景グリーンにしたい*/
 .menu:hover {
   background: $brown;
   height: 100%;
@@ -61,11 +60,6 @@ h1 {
   }
 
   }
-
-/*ここまでがヘッダー */
-
-
-/*コンテンツ*/
 
 .content{
   padding: 1rem;

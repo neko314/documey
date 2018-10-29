@@ -22,7 +22,7 @@
         <table>
           <tr><th>氏名</th><td><%= @participant.name %></td></tr>
           <tr><th>会員番号</th><td><%= @participant.membership_number %></td></tr>
-          <tr><th>取得ポイント</th><td>ポイント</td></tr>
+          <tr><th>取得ポイント</th><td><%= @seminar.point %>ポイント</td></tr>
           <tr><th>日時</th><td><%= "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%Y-%m-%d %k:%M")}" %></td></tr>
           <tr><th>場所</th><td><%= @seminar.place %></td></tr>
           <tr><th>勉強会名称</th><td><%= @seminar.title %></td></tr>

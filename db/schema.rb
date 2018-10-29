@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_23_085409) do
+ActiveRecord::Schema.define(version: 2018_10_29_110731) do
 
   create_table "participants", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2018_10_23_085409) do
     t.datetime "updated_at", null: false
     t.datetime "start_at"
     t.datetime "finish_at"
+    t.integer "point", default: 5, null: false
     t.index ["user_id"], name: "index_seminars_on_user_id"
   end
 
