@@ -21,9 +21,11 @@ ja:
   Delete_Seminar: 勉強会削除
   Start_at: 開始日時
   Finish_at: 終了日時
+  Date_and_Time: 開催日時
   Place: 場所
   Title: タイトル
   Theme: テーマ
+  Point: ポイント
   No_Seminar: 勉強会はありません
   New_Parcitipant: 参加者登録
   Participants: 参加者一覧

@@ -1,7 +1,7 @@
 <h1><i class="fas fa-chalkboard-teacher"><%= t :Seminar %></i></h1>
 <table class="title-theme">
-  <tr><th>Title</th><td class="seminar-title"> <%= @seminar.title %></td></tr>
-  <tr><th>Theme</th><td class="seminar-theme"> <%= @seminar.theme %></td></tr>
+  <tr><th><%= t :Title %></th><td class="seminar-title"> <%= @seminar.title %></td></tr>
+  <tr><th><%= t :Theme %></th><td class="seminar-theme"> <%= @seminar.theme %></td></tr>
 </table>
 
 
@@ -14,8 +14,7 @@
 <table class="seminar-info">
   <thead>
     <tr>
-      <th><%= t :Start_at %></th>
-      <th><%= t :Finish_at %></th>
+      <th><%= t :Date_and_Time %></th>
       <th><%= t :Place %></th>
       <th><%= t :Point %></th>
     </tr>
@@ -23,8 +22,7 @@
 
   <tbody>
       <tr>
-        <td><%= @seminar.start_at.strftime("%Y-%m-%d %k:%M") %></td>
-        <td><%= @seminar.finish_at.strftime("%Y-%m-%d %k:%M") %></td>
+        <td><%= "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%Y-%m-%d %k:%M")}" %></td>
         <td><%= @seminar.place %></td>
         <td><%= @seminar.point %></td>
       </tr>
