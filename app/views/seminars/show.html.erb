@@ -17,6 +17,7 @@
       <th><%= t :Start_at %></th>
       <th><%= t :Finish_at %></th>
       <th><%= t :Place %></th>
+      <th><%= t :Point %></th>
     </tr>
   </thead>
 
@@ -25,6 +26,7 @@
         <td><%= @seminar.start_at.strftime("%Y-%m-%d %k:%M") %></td>
         <td><%= @seminar.finish_at.strftime("%Y-%m-%d %k:%M") %></td>
         <td><%= @seminar.place %></td>
+        <td><%= @seminar.point %></td>
       </tr>
   </tbody>
 </table>
