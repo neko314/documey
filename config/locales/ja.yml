@@ -36,6 +36,7 @@ ja:
   Generate_Report_PDF: 活動実施報告書PDFを作成
   Send_Report_to_Association: 協会に活動実施報告書を送付
   Generate_Certification_PDF: 参加証明書PDFを作成
+  Send_Certification: 参加証明書を送付
   Login_successful: ログインしました
   Login_failed: ログインに失敗しました
   Logged_out!: ログアウトしました
@@ -54,6 +55,7 @@ ja:
   Delete_particepant: 参加者を削除しました
   Are_you_sure?: 本当に削除しますか？
   Sent_report_successfully: 活動実施報告書を送付しました
+  Sent_certification_successfully: 参加証明書を送付しました
 
   activerecord:
     models:

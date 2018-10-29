@@ -8,7 +8,7 @@
   <%= link_to user_seminar_path(current_user, @seminar, format: "pdf") do %>
     <i class="far fa-file-pdf"><%= t :Generate_Report_PDF %></i>
   <% end%>
-  <%= link_to user_seminar_mail_path(current_user, @seminar) do %>
+  <%= link_to user_seminar_report_mail_path(current_user, @seminar) do %>
     <i class="far fa-envelope"><%= t :Send_Report_to_Association %></i>
   <% end %>
 <table class="seminar-info">
@@ -37,6 +37,10 @@
 <%= link_to user_seminar_certification_path(current_user, @seminar, format: "pdf") do %>
   <i class="far fa-file-pdf"><%= t :Generate_Certification_PDF %></i>
 <% end%>
+
+<%= link_to user_seminar_cert_mail_path(current_user, @seminar) do %>
+  <i class="far fa-envelope"><%= t :Send_Certification %></i>
+<% end %>
 
 <% if @seminar.participants.any? %>
   <table class="seminar-participants">
