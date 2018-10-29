@@ -1,0 +1,2 @@
+class CertificationMailer < ApplicationMailer
+end
