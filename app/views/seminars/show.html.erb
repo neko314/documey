@@ -38,6 +38,10 @@
   <i class="far fa-file-pdf"><%= t :Generate_Certification_PDF %></i>
 <% end%>
 
+<%= link_to user_seminar_cert_mail_path(current_user, @seminar) do %>
+  <i class="far fa-envelope"><%= t :Send_Certification %></i>
+<% end %>
+
 <% if @seminar.participants.any? %>
   <table class="seminar-participants">
     <tr>
