@@ -59,6 +59,6 @@ class SeminarsController < ApplicationController
 
   private
     def seminar_params
-      params.require(:seminar).permit(:date, :start_at, :finish_at, :place, :title, :theme)
+      params.require(:seminar).permit(:date, :start_at, :finish_at, :place, :title, :theme, :point)
     end
 end
