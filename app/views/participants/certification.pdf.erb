@@ -21,12 +21,12 @@
         <p>下記の内容で、参加したことを証明します。</p>
         <table>
           <tr><th>氏名</th><td><%= @participant.name %></td></tr>
-          <tr><th>会員番号</th><td>なまえ</td></tr>
-          <tr><th>取得ポイント</th><td>なまえ</td></tr>
-          <tr><th>日時</th><td>なまえ</td></tr>
-          <tr><th>場所</th><td>なまえ</td></tr>
-          <tr><th>勉強会名称</th><td>なまえ</td></tr>
-          <tr><th>内容</th><td>なまえ</td></tr>
+          <tr><th>会員番号</th><td><%= @participant.membership_number %></td></tr>
+          <tr><th>取得ポイント</th><td>ポイント</td></tr>
+          <tr><th>日時</th><td><%= "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%Y-%m-%d %k:%M")}" %></td></tr>
+          <tr><th>場所</th><td><%= @seminar.place %></td></tr>
+          <tr><th>勉強会名称</th><td><%= @seminar.title %></td></tr>
+          <tr><th>内容</th><td></td></tr>
           <tr><th></th><td class="create_on"><%= "#{Date.today.year}年 #{Date.today.month}月 #{Date.today.day}日" %></td></tr>
           <tr><th>開催責任者（幹事）：</th><td><%= @seminar.user.name %></td></tr>
         </table>
