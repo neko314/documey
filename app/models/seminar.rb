@@ -7,4 +7,5 @@ class Seminar < ApplicationRecord
   validates :place, presence: true
   validates :title, presence: true
   validates :theme, presence: true
+  validates :point, presence: true
 end
