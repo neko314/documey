@@ -1,5 +1,5 @@
 ja:
-  Log_In: ログイン
+  Login: ログイン
   Log_Out: ログアウト
   Sign_Up: サインアップ
   My_Seminars: 勉強会
@@ -12,7 +12,9 @@ ja:
   Name: 氏名
   Kana: フリガナ
   Email: Eメール
+  email: Eメール
   Password: パスワード
+  password: パスワード
   Membership_Number: 会員番号
   Seminars: 勉強会一覧
   Seminar: 勉強会詳細
@@ -74,8 +76,8 @@ ja:
         password: パスワード
         password_confirmation: パスワード（確認用）
 
-      user_session:
-        Email: Eメール
+      user_sessions:
+        email: Eメール
         password: パスワード
 
       seminar:
