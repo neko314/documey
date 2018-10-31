@@ -2,46 +2,41 @@ require "application_system_test_case"
 
 class UsersTest < ApplicationSystemTestCase
   setup do
-    @user = users(:one)
+    @user = users(:user1)
   end
 
-  test "visiting the index" do
-    visit users_url
-    assert_selector "h1", text: "Users"
+  test "creating a user" do
+    visit new_user_path
+    fill_in "氏名", with: "test"
+    fill_in "フリガナ", with: "テスト"
+    fill_in "Email", with: "test@example.com"
+    fill_in "会員番号", with: "ZZZ111111"
+    fill_in "パスワード", with: "111"
+    fill_in "パスワード（確認用）", with: "111"
+    click_on "登録する"
+    assert_text "ユーザー登録が完了しました"
   end
 
-  test "creating a User" do
-    visit users_url
-    click_on "New User"
-
-    fill_in "Crypted Password", with: @user.crypted_password
-    fill_in "Email", with: @user.email
-    fill_in "Salt", with: @user.salt
-    click_on "Create User"
-
-    assert_text "User was successfully created"
-    click_on "Back"
+  test "updating a user" do
+    visit new_user_session_path
+    fill_in "email", with: @user.email
+    fill_in "password", with: "111111"
+    click_on "ログイン"
+    visit edit_user_path(@user)
+    fill_in "Email", with: "yamadadayo@example.com"
+    click_on "更新する"
+    assert_text "プロフィールを更新しました"
   end
 
-  test "updating a User" do
-    visit users_url
-    click_on "Edit", match: :first
-
-    fill_in "Crypted Password", with: @user.crypted_password
-    fill_in "Email", with: @user.email
-    fill_in "Salt", with: @user.salt
-    click_on "Update User"
-
-    assert_text "User was successfully updated"
-    click_on "Back"
-  end
-
-  test "destroying a User" do
-    visit users_url
+  test "destroying a user" do
+    visit new_user_session_path
+    fill_in "email", with: @user.email
+    fill_in "password", with: "111111"
+    click_on "ログイン"
+    visit edit_user_path(@user)
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on "アカウント削除", match: :first
     end
-
-    assert_text "User was successfully destroyed"
+    assert_text "アカウントを削除しました"
   end
 end
