@@ -34,7 +34,7 @@
             </ul> -->
 
           <li class="menu"><%= link_to  :logout, method: :post do %>
-            <i class="fas fa-sign-out-alt"><%= t :Log_Out %></i>
+            <i class="fas fa-sign-out-alt"><%= t :Logout %></i>
             <% end %>
           </li>
         </ul>
@@ -44,11 +44,11 @@
         <% end%>
         <ul class="header-menus">
           <li class="menu"><%= link_to new_user_session_path do %>
-            <i class="fas fa-sign-in-alt"><%= t :Log_In %></i>
+            <i class="fas fa-sign-in-alt"><%= t :Login %></i>
             <% end %>
           </li>
           <li class="menu"><%= link_to new_user_path do %>
-            <i class="fas fa-user-plus"><%= t :Sign_Up %></i>
+            <i class="fas fa-user-plus"><%= t :Signup %></i>
             <% end %>
           </li>
         </ul>
