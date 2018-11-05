@@ -1,19 +1,19 @@
 seminar1:
   id: 1
-  start_at: "2018-10-01 10:00:00+0900"
-  finish_at: "2018-10-01 12:00:00+0900"
-  place: "区民館"
-  title: "楽しく"
-  theme: "レベルアップ"
+  start_at: 2018-10-01 10:00:00+0900
+  finish_at: 2018-10-01 12:00:00+0900
+  place: 区民館
+  title: アドラー心理学的カウンセリング
+  theme: レベルアップ
   point: 5
   user_id: 1
 
 seminar2:
   id: 2
-  start_at: "2018-9-01 19:00:00+0900"
-  finish_at: "2018-9-02 17:00:00+0900"
-  place: "セミナーホール"
-  title: "実践力向上"
-  theme: "スキルアップ"
+  start_at: 2018-9-01 19:00:00+0900
+  finish_at: 2018-9-02 17:00:00+0900
+  place: セミナーホール
+  title: 実践力向上ロープレ
+  theme: スキルアップ
   point: 10
   user_id: 2
