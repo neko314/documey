@@ -1,7 +1,8 @@
 ja:
-  Log_In: ログイン
-  Log_Out: ログアウト
-  Sign_Up: サインアップ
+  Login: ログイン
+  login: ログイン
+  Logout: ログアウト
+  Signup: サインアップ
   My_Seminars: 勉強会
   Show: 詳細
   Back: 戻る
@@ -11,8 +12,10 @@ ja:
   Destroy_User: アカウント削除
   Name: 氏名
   Kana: フリガナ
-  Email: Eメール
+  Email: メールアドレス
+  email: メールアドレス
   Password: パスワード
+  password: パスワード
   Membership_Number: 会員番号
   Seminars: 勉強会一覧
   Seminar: 勉強会詳細
@@ -69,13 +72,13 @@ ja:
       user:
         name: 氏名
         kana: フリガナ
-        Email: Eメール
+        email: メールアドレス
         membership_number: 会員番号
         password: パスワード
         password_confirmation: パスワード（確認用）
 
-      user_session:
-        Email: Eメール
+      user_sessions:
+        email: メールアドレス
         password: パスワード
 
       seminar:
@@ -88,5 +91,11 @@ ja:
       participant:
         name: 氏名
         kana: フリガナ
-        Email: Eメール
+        email: メールアドレス
         membership_number: 会員番号
+
+  helpers:
+    submit:
+      create: 登録
+      update: 更新
+      submit: 保存

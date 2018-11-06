@@ -1,6 +1,6 @@
-participant:
+participant1:
   id: 1
-  name: nakama
+  name: 山本 花子
   membership_number: ABC222222
   email: participant@example.com
   seminar_id: 1

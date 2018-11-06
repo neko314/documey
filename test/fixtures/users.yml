@@ -1,8 +1,17 @@
-user:
+user1:
   id: 1
-  name: testuser
-  kana: テストユーザー
+  name: 山田 太郎
+  kana: ヤマダ タロウ
   membership_number: ABC123456
-  email: test@example.com
+  email: yamada@example.com
+  crypted_password: $2a$10$ODS5hsWyQI7wxlSQdWfnbuwy/V0V97/g6qhAWuesvSR4Hg10W.j76
+  salt: epU6ttMEwGN2iaDRTwh-
+
+user2:
+  id: 2
+  name: 田中 次郎
+  kana: タナカ ジロウ
+  membership_number: BBB111111
+  email: tanaka@example.com
   crypted_password: $2a$10$ODS5hsWyQI7wxlSQdWfnbuwy/V0V97/g6qhAWuesvSR4Hg10W.j76
   salt: epU6ttMEwGN2iaDRTwh-
