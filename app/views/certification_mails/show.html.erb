@@ -6,6 +6,6 @@
   <tr><th>Attachment</th><td><%= @mail.attachments.first.filename %></td></tr>
   <tr><th>Content</th> <td><%= @mail.html_part.body %></td></tr>
 </table>
-<%= link_to user_seminar_send_certficitaion_path(current_user, @seminar) do %>
+<%= link_to user_seminar_send_certification_path(current_user, @seminar) do %>
   <i class="far fa-envelope"><%= t :Send_mail %></i>
 <% end %>
