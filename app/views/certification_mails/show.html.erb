@@ -1,1 +1,4 @@
 <h1><%= t :Preview %></h1>
+<%= link_to user_seminar_send_certficitaion_path(current_user, @seminar) do %>
+  <i class="far fa-envelope"><%= t :Send_mail %></i>
+<% end %>
