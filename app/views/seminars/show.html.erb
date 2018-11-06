@@ -11,7 +11,7 @@
     <i class="far fa-file-pdf"><%= t :Generate_Report_PDF %></i>
   <% end%>
   <%= link_to user_seminar_report_preview_path(current_user, @seminar) do %>
-    <i class="far fa-envelope"><%= t :Create_report_mail_to_Association %></i>
+    <i class="far fa-envelope" id="report-envelop"><%= t :Create_report_mail_to_Association %></i>
   <% end %>
 >>>>>>> Change routing to send report mail
 <table class="seminar-info">
