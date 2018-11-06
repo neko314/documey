@@ -1,0 +1,10 @@
+<table class="report-preview">
+  <tr><th>From</th><td><%= @mail.from %></td>
+  <tr><th>To</th><td><%= @mail.to %></td></tr>
+  <tr><th>Subject</th><td><%= @mail.subject %></td></tr>
+  <tr><th>Attachment</th><td><%= @mail.attachments.first.filename %></td></tr>
+  <tr><th>Content</th> <td><%= @mail.html_part.body %></td></tr>
+</table>
+  <%= link_to user_seminar_send_report_path(current_user, @seminar) do %>
+    <i class="far fa-envelope"><%= t :Send_mail %></i>
+  <% end %>

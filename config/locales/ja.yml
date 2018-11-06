@@ -38,7 +38,10 @@ ja:
   Edit_Participant: 参加者情報編集
   Show_Participant: 参加者詳細
   Delete_Participant: 参加者削除
-  Send_Report_to_Association: 協会に活動実施報告書を送付
+  Generate_Report_PDF: 活動実施報告書PDFを作成
+  Create_report_mail_to_Association: 活動実施報告書のメールを作成
+  Send_mail: メール送信
+  Generate_Certification_PDF: 参加証明書PDFを作成
   Send_Certification: 参加証明書を送付
   Login_successful: ログインしました
   Login_failed: ログインに失敗しました
