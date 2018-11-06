@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'report_preview' => 'report_mails#show'
       get 'send_report' => 'report_mails#create'
       get 'certification' => 'participants#certification'
+      get 'certficitaion_preview' => 'certification_mails#show'
       get 'cert_mail' => 'participants#send_certification_mail'
     end 
   end
