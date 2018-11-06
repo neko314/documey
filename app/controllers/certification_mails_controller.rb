@@ -1,6 +1,11 @@
 class CertificationMailsController < ApplicationController
   def show
     @seminar = Seminar.find(params[:seminar_id])
+    @participant = @seminar.participants
+    @seminar.participants.each do |p|
+      @participant = p 
+      @mail = CertificationMailer.with(user: current_user, seminar: @seminar, participant: @participant).certification_mail
+    end
   end
 
    def create
