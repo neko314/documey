@@ -1,0 +1,2 @@
+class CertificationMailsController < ApplicationController
+end
