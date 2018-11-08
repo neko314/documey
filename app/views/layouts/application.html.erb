@@ -13,46 +13,36 @@
 
   <body>
     <nav class="header-nav">
-      <% if current_user %>
-        <%= link_to user_seminars_path(current_user) do%>
-          <%= image_tag 'logo.svg', class:"logo" %>
-        <% end%>
-        <ul class="header-menus">
+      <ul class="header-menus">
+        <li><%= link_to "/" do %>
+              <%= image_tag 'logo_white.svg', class:"logo"%>
+            <% end%></li>
+        <% if current_user %>
           <li class="menu"><%= link_to user_path(current_user) do %>
             <i class="fas fa-user"><%= "#{current_user.name}" %></i>
-            <% end %>
-          </li>
+            <% end %></li>
             <!-- <ul class="submenus">
-              <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
+            <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
             </ul> -->
           <li class="menu"><%= link_to user_seminars_path(current_user) do %>
             <i class="fas fa-chalkboard-teacher"><%= t :My_Seminars %></i>
-          <% end %>
+          <% end %></li>
             <!-- <ul class="submenus">
               <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
               <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
             </ul> -->
-
           <li class="menu"><%= link_to  :logout, method: :post do %>
             <i class="fas fa-sign-out-alt"><%= t :Logout %></i>
-            <% end %>
-          </li>
-        </ul>
-      <% else %>
-        <%= link_to "/" do%>
-          <%= image_tag 'logo.png' %>
-        <% end%>
-        <ul class="header-menus">
+            <% end %></li>
+        <% else %>
           <li class="menu"><%= link_to new_user_session_path do %>
             <i class="fas fa-sign-in-alt"><%= t :Login %></i>
-            <% end %>
-          </li>
+            <% end %></li>
           <li class="menu"><%= link_to new_user_path do %>
             <i class="fas fa-user-plus"><%= t :Signup %></i>
-            <% end %>
-          </li>
-        </ul>
-      <% end %>
+            <% end %></li>
+        <% end %> 
+      </ul>
     </nav>
     <section class="notices">
       <p class="notice"><%= flash[:notice] %></p>

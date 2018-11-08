@@ -24,15 +24,15 @@ h1 {
   text-align: left;
 }
 
-.logo {
-  height: 3rem;
-  width: 3rem;
-  padding-top: 1rem;
-}
-
 #header-nav {
   background: $beige;
   padding: 1rem;
+}
+
+.logo {
+  height: 3rem;
+  width: 3rem;
+  background: $light-orange;
 }
 
 .header-menus {
