@@ -50,14 +50,19 @@ class ParticipantsController < ApplicationController
     redirect_to user_seminar_path(current_user, @seminar), notice: t("Delete_particepant")
   end
 
-  def send_certification_mail
-    @user = current_user
+  def certification
     @seminar = Seminar.find(params[:seminar_id])
-    @seminar.participants.each do |p|
-      @participant = p
-      CertificationMailer.with(user: @user, seminar: @seminar, participant: @participant).certification_mail.deliver
+    @participants = @seminar.participants
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "file_name",
+              title: "#{@seminar.title}",
+              encoding: 'UTF-8',
+              show_as_html: params.key?('debug'),
+              page_size: 'A4'
+      end
     end
-    redirect_to [current_user, @seminar], notice: t("Sent_certification_successfully")
   end
 
   private

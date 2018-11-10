@@ -1,6 +1,13 @@
 participant1:
   id: 1
   name: 山本 花子
+  membership_number: ABC111111
+  email: participant1@example.com
+  seminar_id: 1
+
+participant2:
+  id: 2
+  name: 林 茂雄
   membership_number: ABC222222
-  email: participant@example.com
+  email: participant2@example.com
   seminar_id: 1

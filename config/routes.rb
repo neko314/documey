@@ -4,11 +4,14 @@ Rails.application.routes.draw do
   resources :users do
     resources :seminars do
       resources :participants
-      get 'report_mail' => 'seminars#send_report_mail'
-      get 'cert_mail' => 'participants#send_certification_mail'
+      get 'report_preview' => 'report_mails#show'
+      get 'send_report' => 'report_mails#create'
+      get 'certification' => 'participants#certification'
+      get 'certification_preview' => 'certification_mails#index'
+      get 'send_certification' => 'certification_mails#create'
     end 
   end
-
+  
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 end
