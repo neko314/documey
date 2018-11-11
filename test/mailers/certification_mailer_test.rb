@@ -13,7 +13,7 @@ class CertificationMailerTest < ActionMailer::TestCase
     assert_equal ["#{@user.email}"], email.from
     assert_equal ["#{@participant.email}"], email.to
     assert_equal "参加証明書", email.attachments.first.filename
-    assert_equal read_fixture("certification_mail_html").join, email.html_part.body.to_s
-    assert_equal read_fixture("certification_mail_text").join, email.text_part.body.to_s
+    assert_equal read_fixture("certification_mail_html").join, email.html_part.body.to_s.delete("\r")
+    assert_equal read_fixture("certification_mail_text").join, email.text_part.body.to_s.delete("\r")
   end
 end
