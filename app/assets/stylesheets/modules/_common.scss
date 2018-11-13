@@ -2,8 +2,8 @@ body {
   background: $beige;
   color: $brown;
   border: solid 8px $light-orange;
-  // min-height: 100vh;
 }
+
 body, #wrapper {
   display: flex;
   flex-direction: column;
