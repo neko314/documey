@@ -12,44 +12,62 @@
   </head>
 
   <body>
-    <nav class="header-nav">
-      <ul class="header-menus">
-        <li><%= link_to "/" do %>
-              <%= image_tag 'logo_white.svg', class:"logo"%>
-            <% end%></li>
-        <% if current_user %>
-          <li class="menu"><%= link_to user_path(current_user) do %>
-            <i class="fas fa-user"><%= "#{current_user.name}" %></i>
+    <div id="wrapper">
+      <nav class="header-nav">
+        <ul class="header-menus">
+          <li><%= link_to "/" do %>
+                <%= image_tag 'logo_white.svg', class:"logo"%>
+              <% end%></li>
+          <% if current_user %>
+            <li class="menu"><%= link_to user_path(current_user) do %>
+              <i class="fas fa-user"><%= "#{current_user.name}" %></i>
+              <% end %></li>
+              <!-- <ul class="submenus">
+              <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
+              </ul> -->
+            <li class="menu"><%= link_to user_seminars_path(current_user) do %>
+              <i class="fas fa-chalkboard-teacher"><%= t :My_Seminars %></i>
             <% end %></li>
-            <!-- <ul class="submenus">
-            <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
-            </ul> -->
-          <li class="menu"><%= link_to user_seminars_path(current_user) do %>
-            <i class="fas fa-chalkboard-teacher"><%= t :My_Seminars %></i>
-          <% end %></li>
-            <!-- <ul class="submenus">
-              <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
-              <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
-            </ul> -->
-          <li class="menu"><%= link_to  :logout, method: :post do %>
-            <i class="fas fa-sign-out-alt"><%= t :Logout %></i>
-            <% end %></li>
-        <% else %>
-          <li class="menu"><%= link_to new_user_session_path do %>
-            <i class="fas fa-sign-in-alt"><%= t :Login %></i>
-            <% end %></li>
-          <li class="menu"><%= link_to new_user_path do %>
-            <i class="fas fa-user-plus"><%= t :Signup %></i>
-            <% end %></li>
-        <% end %> 
-      </ul>
-    </nav>
-    <section class="notices">
-      <p class="notice"><%= flash[:notice] %></p>
-      <p class="alert"><%= flash[:alert] %></p>
-    </section>
-    <article class="content">
-      <%= yield %>
-    <article class="content">
+              <!-- <ul class="submenus">
+                <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
+                <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
+              </ul> -->
+            <li class="menu"><%= link_to  :logout, method: :post do %>
+              <i class="fas fa-sign-out-alt"><%= t :Logout %></i>
+              <% end %></li>
+          <% else %>
+            <li class="menu"><%= link_to new_user_session_path do %>
+              <i class="fas fa-sign-in-alt"><%= t :Login %></i>
+              <% end %></li>
+            <li class="menu"><%= link_to new_user_path do %>
+              <i class="fas fa-user-plus"><%= t :Signup %></i>
+              <% end %></li>
+          <% end %> 
+        </ul>
+      </nav>
+      <section class="notices">
+        <p class="notice"><%= flash[:notice] %></p>
+        <p class="alert"><%= flash[:alert] %></p>
+      </section>
+      <article class="content">
+        <%= yield %>
+      </article>
+      <footer>
+        <ul class="footer-menus">
+          <li class="footer-menu">documeyとは</li>
+          <ul><li class="footer-menu">Contact</li>
+            <li><%= link_to "https://github.com/neko314/documey" do %>
+              <i class="fab fa-github">GitHub</i>
+              <% end %></li>
+            <li><%= link_to "" do %>
+              <i class="far fa-envelope">GitHub</i>
+              <% end %></li>
+          </ul>
+          <li class="footer-menu">Privacy Policy</li>
+        </ul>
+        <p class="footer-contact">Copyright © 2018 Kaneko Keiko</p>
+      </footer> 
+    
+    </div>
   </body>
 </html>
