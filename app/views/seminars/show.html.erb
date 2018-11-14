@@ -53,7 +53,7 @@
     </tr>
     <% @seminar.participants.each do |p| %>
     <tr>
-      <td><%= p.membership_number %></td>
+      <td><%= membership_number(p) %></td>
       <td><%= p.name %></td>
       <td><%= link_to t("Show_Participant"), user_seminar_participant_path(current_user, @seminar, p) %></td>
     </tr>
