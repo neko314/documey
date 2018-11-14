@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :seminars do
       resources :participants
+      get 'report' => 'reports#show'
       get 'report_preview' => 'report_mails#show'
       get 'send_report' => 'report_mails#create'
       get 'certification' => 'certifications#show'
