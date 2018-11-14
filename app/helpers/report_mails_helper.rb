@@ -1,2 +1,0 @@
-module ReportMailsHelper
-end
