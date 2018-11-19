@@ -1,12 +1,7 @@
 #header-nav {
   background: $base;
   padding: $moderate;
-}
-
-.logo {
-  height: 2rem;
-  width: 2rem;
-  background: $main;
+  // justify-content: flex-end
 }
 
 .header-menus {
@@ -14,6 +9,15 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  background: $main;
+}
+
+.logo {
+  position: absolute;
+  top: $narrow;
+  left: $narrow;
+  height: 2rem;
+  width: 2rem;
   background: $main;
 }
 
