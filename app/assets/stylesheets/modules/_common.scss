@@ -27,6 +27,11 @@ article {
               0 1px 3px 1px $shadow;
 }
 
+.page-title {
+  font-size: $huge;
+  padding: $moderate;
+}
+
 li {
   list-style: none;
 }
@@ -42,6 +47,7 @@ h1 {
 table {
   text-align: center;
   border-collapse: collapse;
+  font-size: $normal;
 }
 
 label {
