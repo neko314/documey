@@ -1,7 +1,7 @@
 // セミナー一覧
 .seminars th,
 .seminars td {
-  border: 1px solid $light-brown;
+  border: 1px solid $table-line;
   padding: 1rem;
 }
 
@@ -55,6 +55,6 @@
 
 .seminar-participants th,
 .seminar-participants td {
-  border: 1px solid $light-brown;
+  border: 1px solid $table-line;
   padding: 0.5rem;
 }

@@ -1,7 +1,7 @@
 body {
-  background: $beige;
+  background: $base;
   color: $brown;
-  border: solid 8px $light-orange;
+  border: solid 8px $main;
 }
 
 body, #wrapper {
@@ -30,14 +30,14 @@ h1 {
 }
 
 #header-nav {
-  background: $beige;
+  background: $base;
   padding: 1rem;
 }
 
 .logo {
   height: 2.5rem;
   width: 2.5rem;
-  background: $light-orange;
+  background: $main;
 }
 
 .header-menus {
@@ -45,14 +45,14 @@ h1 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background: $light-orange;
+  background: $main;
 }
 
 .menu {
   padding: 0 2rem;
   text-align: center;
   a {
-    color: $white;
+    color: $header-footer-text;
     text-decoration: none;
   }
 }
@@ -61,7 +61,7 @@ h1 {
   background: $brown;
   height: 100%;
   a {
-    color: $pink;
+    color: $accent;
   }
 
   }
@@ -81,15 +81,15 @@ label {
 }
 
 .notice{
-  background: $green;
-  color: $white;
+  background: $success;
+  color: $header-footer-text;
   text-align: center;
   font-weight: bold;
 }
 
 .alert {
-  background: $orange;
-  color: $white;
+  background: $error;
+  color: $header-footer-text;
   text-align: center;
   font-weight: bold;
 }
