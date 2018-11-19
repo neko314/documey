@@ -1,0 +1,35 @@
+#header-nav {
+  background: $base;
+  padding: 1rem;
+}
+
+.logo {
+  height: 2rem;
+  width: 2rem;
+  background: $main;
+}
+
+.header-menus {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: $main;
+}
+
+.menu {
+  padding: 0 2rem;
+  text-align: center;
+  a {
+    color: $header-footer-text;
+    text-decoration: none;
+  }
+}
+
+.menu:hover {
+  background: $brown;
+  height: 100%;
+  a {
+    color: $accent;
+  }
+}
