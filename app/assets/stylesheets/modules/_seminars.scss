@@ -2,7 +2,7 @@
 .seminars th,
 .seminars td {
   border: 1px solid $table-line;
-  padding: 1rem;
+  padding: $moderate;
 }
 
 // セミナー個別ページ
@@ -14,7 +14,7 @@
 }
 
 .title-theme th {
-  padding-right: 0.5rem;
+  padding-right: $narrow;
   text-align: right;
 }
 
@@ -23,13 +23,9 @@
 }
 
 .seminar-info {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-top: $moderate;
+  margin-bottom: $very-wide;
 }
-
-// .seminar-info th {
-//   // width: 20%;
-// }
 
 .date {
   width: 40%
@@ -44,17 +40,17 @@
 }
 
 .seminar-participants h3{
-  font-size: 1.5rem;
+  font-size: $large;
 }
 
 
 .seminar-participants table {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: $very-wide;
+  margin-bottom: $very-wide;
 }
 
 .seminar-participants th,
 .seminar-participants td {
   border: 1px solid $table-line;
-  padding: 0.5rem;
+  padding: $narrow;
 }

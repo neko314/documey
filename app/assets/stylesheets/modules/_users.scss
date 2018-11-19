@@ -8,7 +8,6 @@
  display: flex;
  flex-flow: row;
  justify-content: center;
- line-height: 2.5rem;
 }
 
 .user-info-title {
@@ -19,7 +18,7 @@
 
 .user-info-content {
   width: 50%;
-  padding-left: 2rem;
+  padding-left: $very-wide;
   text-align: left;
 }
 
