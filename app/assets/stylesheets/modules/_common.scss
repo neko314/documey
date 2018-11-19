@@ -16,10 +16,15 @@ body, #wrapper {
 
 article {
   padding: $very-wide;
+  margin: $very-wide auto;
   display: flex;
+  width: 60rem;
+  background: white;
   text-align: center;
   flex-flow: column nowrap;
   justify-content: center;
+  box-shadow: 0 1px 1px 0 $shadow,
+              0 1px 3px 1px $shadow;
 }
 
 li {
