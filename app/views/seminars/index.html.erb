@@ -16,10 +16,8 @@
         <% @seminars.each do |seminar| %>
           <tr>
             <td><%= seminar.start_at.strftime("%Y-%m-%d %k:%M") %></td>
-            <td><%= seminar.finish_at.strftime("%Y-%m-%d %k:%M") %></td>
             <td><%= seminar.place %></td>
             <td><%= seminar.title %></td>
-            <td><%= seminar.theme %></td>
             <td><%= link_to t("Show"), user_seminar_path(current_user, seminar) %></td>
           </tr>
         <% end %>
