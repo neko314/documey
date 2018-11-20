@@ -1,0 +1,10 @@
+= form_with url:user_sessions_path do |f|
+  .forms
+    .form
+      = f.label :email, t("email")
+      = f.text_field :email
+    .form
+      = f.label :password, t("password")
+      = f.password_field :password
+    .actions
+      = f.submit t("login"), id: "login_button"

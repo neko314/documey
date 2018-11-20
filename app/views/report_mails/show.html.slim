@@ -1,0 +1,31 @@
+h1.page-title
+  = t :Preview
+table.preview
+  tr
+    th
+      | From
+    td
+      = @mail.from
+  tr
+    th
+      | To
+    td
+      = @mail.to
+  tr
+    th
+      | Subject
+    td
+      = @mail.subject
+  tr
+    th
+      | Attachment
+    td
+      = link_to @mail.attachments.first.filename, user_seminar_report_path(format: "pdf")
+  tr
+    th
+      | Content
+    td
+      = @mail.html_part.body
+= link_to user_seminar_send_report_path(current_user, @seminar) do
+  i.far.fa-envelope
+    = t :Send_mail

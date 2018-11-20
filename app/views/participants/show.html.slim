@@ -1,0 +1,24 @@
+.page-title
+  h1
+    i.fas.fa-users
+      = t :Participant
+  = link_to edit_user_seminar_participant_path(current_user, @seminar, @participant) do
+    i.fas.fa-edit
+      = t('Edit_Participant')
+table.participant-infos
+  tr.participant-info
+    th.participant-info-title
+      = t :Name
+    td.participant-info-content
+      = @participant.name
+  tr.participant-info
+    th.participant-info-title
+      = t :Email
+    td.participant-info-content
+      = @participant.email
+  tr.participant-info
+    th.participant-info-title
+      = t :Membership_Number
+    td.participant-info-content
+      = @participant.membership_number
+= link_to t('Seminar'), user_seminar_path(current_user, @seminar)

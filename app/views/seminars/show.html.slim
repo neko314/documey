@@ -1,0 +1,65 @@
+.page-title
+  h1
+    i.fas.fa-chalkboard-teacher
+      = @seminar.title
+  = link_to edit_user_seminar_path(current_user, @seminar) do
+    i.fas.fa-edit
+      = t :Edit_Seminar
+p
+  = @seminar.theme
+  p
+    ul.create-mail
+      li
+        = link_to user_seminar_report_preview_path(current_user, @seminar) do
+          i#report-envelop.far.fa-envelope
+            = t :Create_report_mail
+    table.seminar-info
+      thead
+        tr
+          th.date
+            = t :Date_and_Time
+          th.place
+            = t :Place
+          th.point
+            = t :Point
+      tbody
+        tr
+          td
+            = "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%m-%d %k:%M")}"
+          td
+            = @seminar.place
+          td
+            = @seminar.point
+    .participant
+      h2
+        i.fas.fa-users
+          = t :Participants
+      = link_to new_user_seminar_participant_path(current_user, @seminar) do
+        i.fas.fa-user-plus.new-participant
+          = t("New_Participant")
+    ul.create-mail
+      li
+        = link_to user_seminar_certification_preview_path(current_user, @seminar) do
+          i.far.fa-envelope
+            = t :Create_certification_mail
+      li
+
+    - if @seminar.participants.any?
+      table.participants
+        tr
+          th
+            = t :Membership_Number
+          th
+            = t :Name
+          th[colspan="1"]
+        - @seminar.participants.each do |p|
+          tr
+            td
+              = p.membership_number
+            td
+              = p.name
+            td
+              = link_to t("Show_Participant"), user_seminar_participant_path(current_user, @seminar, p)
+    - else
+      p
+        = t :No_participant
