@@ -21,22 +21,7 @@
       <article class="content">
         <%= yield %>
       </article>
-      <footer>
-        <ul class="footer-menus">
-          <li class="footer-menu">documeyとは</li>
-          <ul><li class="footer-menu">Contact</li>
-            <li><%= link_to "https://github.com/neko314/documey" do %>
-              <i class="fab fa-github">GitHub</i>
-              <% end %></li>
-            <li><%= link_to "" do %>
-              <i class="far fa-envelope">Mail</i>
-              <% end %></li>
-          </ul>
-          <li class="footer-menu">Privacy Policy</li>
-        </ul>
-        <p class="footer-contact">Copyright © 2018 Kaneko Keiko</p>
-      </footer> 
-    
+      <%= render "/shared/footer"%>
     </div>
   </body>
 </html>
