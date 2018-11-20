@@ -6,12 +6,12 @@ h1
       th
         | From
       td
-        = mail.from
+        = mail.from.first
     tr
       th
         | To
       td
-        = mail.to
+        = mail.to.first
     tr
       th
         | Subject
@@ -21,7 +21,8 @@ h1
       th
         | Attachment
       td
-        = link_to mail.attachments.first.filename, user_seminar_certification_path(format: "pdf")
+        - @participant = Participant.find_by(email: mail.to.first)
+        = link_to mail.attachments.first.filename, user_seminar_certification_path(participant: @participant, format: "pdf")
     tr
       th
         | Content

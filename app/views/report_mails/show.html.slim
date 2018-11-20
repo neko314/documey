@@ -5,12 +5,12 @@ table.preview
     th
       | From
     td
-      = @mail.from
+      = @mail.from.first
   tr
     th
       | To
     td
-      = @mail.to
+      = @mail.to.first
   tr
     th
       | Subject
