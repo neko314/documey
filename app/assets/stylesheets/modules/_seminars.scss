@@ -2,29 +2,21 @@
 .seminars th,
 .seminars td {
   border: 1px solid $table-line;
-  padding: $moderate;
+  line-height: $very-wide;
 }
 
 // セミナー個別ページ
-.title-theme {
+.create-mail{
   display: flex;
-  justify-content: center; 
-  flex-flow: column wrap;
-  align-items: center;
-}
-
-.title-theme th {
-  padding-right: $narrow;
-  text-align: right;
-}
-
-.title-theme td {
-  text-align: left;
+  justify-content: flex-end;
 }
 
 .seminar-info {
   margin-top: $moderate;
   margin-bottom: $very-wide;
+  th {
+    background: none;
+  }
 }
 
 .date {
@@ -39,18 +31,21 @@
   width: 20%;
 }
 
-.seminar-participants h3{
-  font-size: $large;
+.participant {
+  display: flex;
+  align-items: baseline;
+  h2 {
+    font-size: $large;
+  }
+  .new-participant {
+    font-size: $normal;
+    padding-left: $moderate;
+  }
 }
 
-
-.seminar-participants table {
-  margin-top: $very-wide;
-  margin-bottom: $very-wide;
-}
-
-.seminar-participants th,
-.seminar-participants td {
-  border: 1px solid $table-line;
-  padding: $narrow;
+.participants {
+  margin: $moderate;
+  th, td {
+    border: 1px solid $table-line;
+  }
 }
