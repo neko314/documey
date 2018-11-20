@@ -1,13 +1,11 @@
-<h1><i class="fas fa-chalkboard-teacher"><%= t :Seminars %></i></h1>
+<h1 class="page-title"><i class="fas fa-chalkboard-teacher"><%= t :Seminars %></i></h1>
 <% if @seminars %>
   <table class="seminars">
     <thead>
       <tr>
         <th><%= t :Start_at %></th>
-        <th><%= t :Finish_at %></th>
         <th><%= t :Place %></th>
         <th><%= t :Title %></th>
-        <th><%= t :Theme %></th>
         <th colspan="1"></th>
       </tr>
     </thead>
@@ -16,10 +14,8 @@
         <% @seminars.each do |seminar| %>
           <tr>
             <td><%= seminar.start_at.strftime("%Y-%m-%d %k:%M") %></td>
-            <td><%= seminar.finish_at.strftime("%Y-%m-%d %k:%M") %></td>
             <td><%= seminar.place %></td>
             <td><%= seminar.title %></td>
-            <td><%= seminar.theme %></td>
             <td><%= link_to t("Show"), user_seminar_path(current_user, seminar) %></td>
           </tr>
         <% end %>
@@ -28,5 +24,3 @@
 <% else %>
   <p><%= t :No_Seminar %></p>
 <% end %>
-
-<%= link_to t("New_Seminar"), new_user_seminar_path %>

@@ -1,20 +1,25 @@
-<h1><i class="fas fa-users"><%= t :Participant %></i></h1>
+<div class="page-title">
+  <h1><i class="fas fa-users"><%= t :Participant %></i></h1>
+  <%= link_to edit_user_seminar_participant_path(current_user, @seminar, @participant) do %>
+    <i class="fas fa-edit"><%= t('Edit_Participant') %></i>
+  <% end %>
+</div>
 
-<p>
-  <strong><%= t :Name %>:</strong>
-  <%= @participant.name %>
-</p>
+<table class="participant-infos">
+  <tr class="participant-info">
+    <th class="participant-info-title"><%= t :Name %></th>
+    <td class="participant-info-content"><%= @participant.name %></td>
+  </tr>
 
-<p>
-  <strong><%= t :Membership_Number %>:</strong>
-  <%= @participant.membership_number %>
-</p>
+  <tr class="participant-info">
+    <th class="participant-info-title"><%= t :Email %></th>
+    <td class="participant-info-content"><%= @participant.email %></td>
+  </tr>
 
-<p>
-  <strong><%= t :Email %>:</strong>
-  <%= @participant.email %>
-</p>
+  <tr class="participant-info">
+    <th class="participant-info-title"><%= t :Membership_Number %></th>
+    <td class="participant-info-content"><%= @participant.membership_number %></td>
+  </td>
+</table>
 
 <%= link_to t('Seminar'), user_seminar_path(current_user, @seminar) %>
-
-<%= link_to t('Edit_Participant'), edit_user_seminar_participant_path(current_user, @seminar, @participant) %>
