@@ -50,21 +50,6 @@ class ParticipantsController < ApplicationController
     redirect_to user_seminar_path(current_user, @seminar), notice: t("Delete_particepant")
   end
 
-  def certification
-    @seminar = Seminar.find(params[:seminar_id])
-    @participants = @seminar.participants
-    respond_to do |format|
-      format.html
-      format.pdf do
-        render pdf: "file_name",
-              title: "#{@seminar.title}",
-              encoding: 'UTF-8',
-              show_as_html: params.key?('debug'),
-              page_size: 'A4'
-      end
-    end
-  end
-
   private
     def participant_params
       params.require(:participant).permit(:name, :membership_number, :email)
