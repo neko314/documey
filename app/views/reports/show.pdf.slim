@@ -1,0 +1,91 @@
+| <!doctype html> 
+html
+  head
+    meta[charset="utf-8"]
+    = wicked_pdf_stylesheet_link_tag "report"
+    = wicked_pdf_javascript_include_tag "number_pages"
+  body[onload="number_pages"]
+    .report
+      header.report-header
+        ul.kinds
+          li.category
+            | 活動実施報告書
+          li.alphabet
+            | F
+        ul.header-contact
+          li.contact
+            | FAX:03-5645-7170
+          li.contact
+            | メール: point@j-cda.jp
+      address.report-address
+        p.created_on
+          | 西暦
+          = Date.today.year
+          | 年 
+          = Date.today.month
+          | 月
+          = Date.today.day
+          | 日
+        p.associtation
+          | 日本キャリア開発協会 御中
+      .report-content
+        p.report-title
+          | 活動実施報告書
+          span.subtitle
+            | (支部地区会・研究会・ピアトレ・各種勉強会等)
+        p.subtext
+          | 下記の通り、活動を行いましたので、報告いたします。
+        table.report-table
+          tr
+            th.report-th
+              | フリガナ
+            td.report-td
+              = @seminar.user.kana
+          tr
+            th.report-th
+              | 報告者氏名(幹事)
+            td.report-td
+              = @seminar.user.name
+          tr
+            th.report-th
+              | 会員番号
+            td.report-td
+              = @seminar.user.membership_number
+          tr
+            th.report-th
+              | 実施日時
+            td.report-td
+              = "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%Y-%m-%d %k:%M")}"
+          tr
+            th.report-th
+              | 実施場所
+            td.report-td
+              = @seminar.place
+          tr
+            th.report-th
+              | 会の名称
+            td.report-td
+              = @seminar.title
+          tr
+            th.report-th
+              | テーマ
+            td.report-td
+              = @seminar.theme
+          tr
+            th.report-th
+              | 参加者氏名 (CDA 会員特定要)
+            - if @seminar.participants.present?
+              td.report-td
+                - @seminar.participants.each do |participant|
+                  = "#{participant.membership_number} : #{participant.name}"
+                  br
+              tr
+
+      footer.report-footer
+        ul.footer-contact
+          li
+            p
+              | 送付先 FAX:03-5645-7170
+          li
+            p
+              | メール: point@j-cda.jp
