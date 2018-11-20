@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ReportMailer < ApplicationMailer
   def report_mail
     @user = params[:user]

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChangeColumnsTypeOfseminars < ActiveRecord::Migration[5.2]
   def up
     remove_column :seminars, :start_at
