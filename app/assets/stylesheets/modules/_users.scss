@@ -1,24 +1,15 @@
-.user-infos {
-  text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
+.user-infos,
 .user-info {
- display: flex;
- flex-flow: row;
- justify-content: center;
+  border: 1px solid $table-line;
+  line-height: $very-wide;
+  th, td {
+    border: 1px solid$table-line;
+  }
+  th {
+    width: 20rem;
+    background: $table-head;
+  }
+  td {
+    width: 30rem;
+  }
 }
-
-.user-info-title {
-  width: 50%;
-  text-align: right;
-  font-weight: bold;
-}
-
-.user-info-content {
-  width: 50%;
-  padding-left: $very-wide;
-  text-align: left;
-}
-

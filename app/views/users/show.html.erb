@@ -1,26 +1,26 @@
 <h1 class="page-title"><%= t :My_Profile %></h1>
 
-<div class="user-infos">
-  <ul class="user-info">
-    <li class="user-info-title"><%= t :Name %>:</li>
-    <li class="user-info-content"><%= @user.name %></li>
-  </ul>
+<table class="user-infos">
+  <tr class="user-info">
+    <th class="user-info-title"><%= t :Name %></th>
+    <td class="user-info-content"><%= @user.name %></td>
+  </tr>
 
-  <ul class="user-info">
-    <li class="user-info-title"><%= t :Kana %>:</li>
-    <li class="user-info-content"><%= @user.kana %></li>
-  </ul>
+  <tr class="user-info">
+    <th class="user-info-title"><%= t :Kana %></th>
+    <td class="user-info-content"><%= @user.kana %></td>
+  </tr>
 
-  <ul class="user-info">
-    <li class="user-info-title"><%= t :Email %>:</li>
-    <li class="user-info-content"><%= @user.email %></li>
-  </ul>
+  <tr class="user-info">
+    <th class="user-info-title"><%= t :Email %></th>
+    <td class="user-info-content"><%= @user.email %></td>
+  </tr>
 
-  <ul class="user-info">
-    <li class="user-info-title"><%= t :Membership_Number %>:</li>
-    <li class="user-info-content"><%= @user.membership_number %></li>
-  </ul>
-</div>
+  <tr class="user-info">
+    <th class="user-info-title"><%= t :Membership_Number %></th>
+    <td class="user-info-content"><%= @user.membership_number %></td>
+  </tr>
+</table>
 
 <%= link_to edit_user_path(@user) do %>
   <i class="fas fa-user-edit"><%= t :Edit_Profile %></i>
