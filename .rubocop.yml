@@ -9,7 +9,7 @@ AllCops:
     - 'actionpack/lib/action_dispatch/journey/parser.rb'
     - 'railties/test/fixtures/tmp/**/*'
     - 'node_modules/**/*'
-    - db/schema.rb
+    - 'db/schema.rb'
 
 Performance:
   Exclude:
