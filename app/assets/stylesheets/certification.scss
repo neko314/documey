@@ -25,13 +25,13 @@ header {
 .association {
   text-align: right;
   line-height: 2.5rem;
-  font-size: $normal;
+  font-size: 1rem;
   border-bottom: 1px solid black;
 }
 
 .no {
   line-height: 2.5rem;
-  font-size: $normal;
+  font-size: 1rem;
   border-bottom: 1px solid black;
   float: right;
 }
@@ -43,16 +43,16 @@ header {
 
 .title {
   text-align: center;
-  font-size: $normal;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .subtitle {
-  font-size: $normal;
+  font-size: 1rem;
 }
 
 table, th, td {
-  font-size: $normal;
+  font-size: 1rem;
   margin: auto;
   line-height: 3rem;
 }
