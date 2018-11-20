@@ -1,9 +1,14 @@
 footer {
   margin-top: auto;
+  background: $main;
+  color: $header-footer-text;
+  a {
+    color: $header-footer-text;
+  }
 }
 
 .footer-menus {
-  height: 5rem;
+  padding: $moderate 0;
   display: flex;
   justify-content: center;
   justify-content:  space-around;
@@ -11,5 +16,5 @@ footer {
 
 .footer-contact {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: $small;
 }

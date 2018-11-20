@@ -1,35 +1,33 @@
 .forms {
-  line-height: 1.5rem;
+  margin: auto;
   align-content: center;
   text-align: center;
 }
 
 .form {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-
-.form label {
-  width: 10rem;
-  text-align: center;
-}
-
-.form input {
-  width: 30rem;
-  margin: 0.5rem 0;
-  margin-left: 3rem;
-  border: solid 1px $brown;
-  text-align: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  label {
+    margin: auto;
+  }
+  input {
+    width: 30rem;
+    margin: $narrow auto;
+    line-height: 2rem;
+    border: 1px solid $table-line;
+    text-align: center;
+  }
 }
 
 .actions {
-  align-items: center;
-  padding: 0.2rem;
-  margin-top: 2rem;
-  color: white;
-  background: salmon;
-  border: salmon 1px solid;
+  padding: $narrow;
+  margin: $wide auto;
+  color: header-footer-text;
+  background: $accent;
+  border: 1px solid $accent;
   border-radius: 1rem;
-  font-size: 1.5rem;
+  font-size: $normal;
+  width: 15rem;
 }

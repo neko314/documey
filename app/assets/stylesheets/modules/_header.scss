@@ -1,0 +1,39 @@
+#header-nav {
+  background: $base;
+  padding: $moderate;
+  // justify-content: flex-end
+}
+
+.header-menus {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: $main;
+}
+
+.logo {
+  position: absolute;
+  top: $narrow;
+  left: $narrow;
+  height: 2rem;
+  width: 2rem;
+  background: $main;
+}
+
+.menu {
+  padding: 0 $very-wide;
+  text-align: center;
+  a {
+    color: $header-footer-text;
+    text-decoration: none;
+  }
+}
+
+.menu:hover {
+  background: $text;
+  height: 100%;
+  a {
+    color: $accent;
+  }
+}

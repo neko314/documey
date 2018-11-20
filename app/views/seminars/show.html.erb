@@ -1,8 +1,17 @@
-<h1><i class="fas fa-chalkboard-teacher"><%= t :Seminar %></i></h1>
-<table class="title-theme">
-  <tr><th><%= t :Title %></th><td class="seminar-title"> <%= @seminar.title %></td></tr>
-  <tr><th><%= t :Theme %></th><td class="seminar-theme"> <%= @seminar.theme %></td></tr>
-</table>
+<div class="page-title">
+  <h1><i class="fas fa-chalkboard-teacher">
+  <%= @seminar.title %></i></h1>
+  <%= link_to edit_user_seminar_path(current_user, @seminar) do %>
+    <i class="fas fa-edit"><%= t :Edit_Seminar %></i>
+  <% end %>
+</div>
+<p><%= @seminar.theme %><p>
+
+<ul class="create-mail">
+  <li><%= link_to user_seminar_report_preview_path(current_user, @seminar) do %>
+    <i class="far fa-envelope" id="report-envelop"><%= t :Create_report_mail %></i>
+  <% end %></li>
+</ul>
 
 <table class="seminar-info">
   <thead>
@@ -21,22 +30,22 @@
       </tr>
   </tbody>
 </table>
-<%= link_to edit_user_seminar_path(current_user, @seminar) do %>
-  <i class="fas fa-edit"><%= t :Edit_Seminar %></i>
-<% end %>
 
-<h3 class="seminar-participants"><i class="fas fa-users"><%= t :Participants %></i></h3>
+<div class="participant">
+  <h2><i class="fas fa-users"><%= t :Participants %></i></h2>
+  <%= link_to new_user_seminar_participant_path(current_user, @seminar) do %>
+    <i class="fas fa-user-plus new-participant"><%= t("New_Participant") %></i>
+  <% end %>
+</div>
 
-<%= link_to user_seminar_report_preview_path(current_user, @seminar) do %>
-  <i class="far fa-envelope" id="report-envelop"><%= t :Create_report_mail_to_Association %></i>
-<% end %>
-
-<%= link_to user_seminar_certification_preview_path(current_user, @seminar) do %>
-  <i class="far fa-envelope"><%= t :Create_certification_mail_to_participants %></i>
-<% end %>
+<ul class="create-mail">
+  <li><%= link_to user_seminar_certification_preview_path(current_user, @seminar) do %>
+    <i class="far fa-envelope"><%= t :Create_certification_mail %></i>
+  <% end %><li>
+</ul>
 
 <% if @seminar.participants.any? %>
-  <table class="seminar-participants">
+  <table class="participants">
     <tr>
       <th><%= t :Membership_Number %></th>
       <th><%= t :Name %></th>
@@ -54,5 +63,3 @@
   <p><%= t :No_participant %></p>
 <% end %>
 
-<%= link_to t("New_Participant"), new_user_seminar_participant_path(current_user, @seminar) %>
-<%= link_to t("New_Seminar"), new_user_seminar_path %>
