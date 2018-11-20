@@ -4,7 +4,7 @@ html {
 
 body {
   background: $base;
-  color: $brown;
+  color: $text;
   line-height: $standard-line-hight;
 }
 
@@ -20,7 +20,7 @@ article {
   display: flex;
   width: 60rem;
   background: white;
-  text-align: center;
+  // text-align: center;
   flex-flow: column nowrap;
   justify-content: center;
   box-shadow: 0 1px 1px 0 $shadow,
@@ -28,8 +28,12 @@ article {
 }
 
 .page-title {
-  font-size: $huge;
-  padding: $moderate;
+  display: flex;
+  align-items: baseline;
+  h1 {
+    font-size: $huge;
+    padding: $moderate;
+  }
 }
 
 li {
@@ -48,6 +52,10 @@ table {
   text-align: center;
   border-collapse: collapse;
   font-size: $normal;
+}
+
+th {
+  background: $table-head;
 }
 
 label {

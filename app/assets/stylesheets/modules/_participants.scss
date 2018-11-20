@@ -1,0 +1,16 @@
+.participant-infos,
+.participant-info {
+  border: 1px solid $table-line;
+  line-height: $very-wide;
+  th, td {
+    border: 1px solid$table-line;
+  }
+  th {
+    width: 20rem;
+    background: $table-head;
+  }
+  td {
+    width: 30rem;
+  }
+}
+

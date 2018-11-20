@@ -1,4 +1,10 @@
-<h1 class="page-title"><%= t :My_Profile %></h1>
+<div class="page-title">
+  <h1><%= t :My_Profile %></h1>
+  <%= link_to edit_user_path(@user) do %>
+    <i class="fas fa-user-edit"><%= t :Edit_Profile %></i>
+  <% end %>
+</div>
+
 
 <table class="user-infos">
   <tr class="user-info">
@@ -22,6 +28,3 @@
   </tr>
 </table>
 
-<%= link_to edit_user_path(@user) do %>
-  <i class="fas fa-user-edit"><%= t :Edit_Profile %></i>
-<% end %>
