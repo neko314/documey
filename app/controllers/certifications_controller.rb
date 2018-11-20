@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CertificationsController < ApplicationController
   def show
     @seminar = Seminar.find(params[:seminar_id])
@@ -7,8 +9,8 @@ class CertificationsController < ApplicationController
       format.pdf do
         render pdf: "file_name",
               title: "#{@seminar.title}",
-              encoding: 'UTF-8',
-              page_size: 'A4'
+              encoding: "UTF-8",
+              page_size: "A4"
       end
     end
   end

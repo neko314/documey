@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CertificationMailsController < ApplicationController
   def index
     @seminar = Seminar.find(params[:seminar_id])
@@ -7,7 +9,7 @@ class CertificationMailsController < ApplicationController
       @mails[i] = CertificationMailer.with(user: current_user, seminar: @seminar, participant: @participant).certification_mail
     end
   end
-    
+
   def create
     @user = current_user
     @seminar = Seminar.find(params[:seminar_id])
@@ -15,6 +17,6 @@ class CertificationMailsController < ApplicationController
       @participant = p
       CertificationMailer.with(user: @user, seminar: @seminar, participant: @participant).certification_mail.deliver
     end
-      redirect_to [current_user, @seminar], notice: t("Sent_certification_successfully")
+    redirect_to [current_user, @seminar], notice: t("Sent_certification_successfully")
   end
 end

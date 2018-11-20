@@ -1,5 +1,6 @@
-class SeminarsController < ApplicationController
+# frozen_string_literal: true
 
+class SeminarsController < ApplicationController
   def index
     @seminars = current_user.seminars
   end
@@ -9,7 +10,7 @@ class SeminarsController < ApplicationController
   end
 
   def new
-     @seminar= Seminar.new
+    @seminar = Seminar.new
   end
 
   def edit

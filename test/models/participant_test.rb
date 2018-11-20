@@ -1,7 +1,8 @@
-require 'test_helper'
+# frozen_string_literal: true
+
+require "test_helper"
 
 class ParticipantTest < ActiveSupport::TestCase
-
   setup do
     @participant = participants(:participant1)
   end

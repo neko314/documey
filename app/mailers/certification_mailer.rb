@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CertificationMailer < ApplicationMailer
   def certification_mail
     @user = params[:user]
