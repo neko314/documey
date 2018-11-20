@@ -21,27 +21,20 @@
           <% if current_user %>
             <li class="menu"><%= link_to user_path(current_user) do %>
               <i class="fas fa-user"><%= "#{current_user.name}" %></i>
-              <% end %></li>
-              <!-- <ul class="submenus">
-              <li class="submenu"><%= link_to 'Profile', edit_user_path(current_user) %></li>
-              </ul> -->
+            <% end %></li>
             <li class="menu"><%= link_to user_seminars_path(current_user) do %>
               <i class="fas fa-chalkboard-teacher"><%= t :My_Seminars %></i>
             <% end %></li>
-              <!-- <ul class="submenus">
-                <li class="submenu"><%= link_to 'Seminars', user_seminars_path(current_user) %></li>
-                <li class="submenu"><%= link_to 'New Seminar', new_user_seminar_path(current_user) %></li>
-              </ul> -->
             <li class="menu"><%= link_to  :logout, method: :post do %>
               <i class="fas fa-sign-out-alt"><%= t :Logout %></i>
-              <% end %></li>
+            <% end %></li>
           <% else %>
             <li class="menu"><%= link_to new_user_session_path do %>
               <i class="fas fa-sign-in-alt"><%= t :Login %></i>
-              <% end %></li>
+            <% end %></li>
             <li class="menu"><%= link_to new_user_path do %>
               <i class="fas fa-user-plus"><%= t :Signup %></i>
-              <% end %></li>
+            <% end %></li>
           <% end %> 
         </ul>
       </nav>
