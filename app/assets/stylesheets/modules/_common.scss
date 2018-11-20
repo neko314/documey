@@ -20,7 +20,6 @@ article {
   display: flex;
   width: 60rem;
   background: white;
-  // text-align: center;
   flex-flow: column nowrap;
   justify-content: center;
   box-shadow: 0 1px 1px 0 $shadow,
@@ -30,9 +29,10 @@ article {
 .page-title {
   display: flex;
   align-items: baseline;
+  padding-bottom: $wide;
   h1 {
     font-size: $huge;
-    padding: $moderate;
+    padding-right: $moderate;
   }
 }
 
