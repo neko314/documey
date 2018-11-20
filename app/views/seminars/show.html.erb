@@ -33,19 +33,9 @@
       </tr>
   </tbody>
 </table>
-<%= link_to edit_user_seminar_path(current_user, @seminar) do %>
-  <i class="fas fa-edit"><%= t :Edit_Seminar %></i>
-<% end %>
 
-<h3 class="seminar-participants"><i class="fas fa-users"><%= t :Participants %></i></h3>
-
-<%= link_to user_seminar_report_preview_path(current_user, @seminar) do %>
-  <i class="far fa-envelope" id="report-envelop"><%= t :Create_report_mail_to_Association %></i>
-<% end %>
-
-<%= link_to user_seminar_certification_preview_path(current_user, @seminar) do %>
-  <i class="far fa-envelope"><%= t :Create_certification_mail_to_participants %></i>
-<% end %>
+<h2 class="seminar-participants"><i class="fas fa-users"><%= t :Participants %></i></h2>
+<%= link_to t("New_Participant"), new_user_seminar_participant_path(current_user, @seminar) %>
 
 <% if @seminar.participants.any? %>
   <table class="seminar-participants">
@@ -66,5 +56,3 @@
   <p><%= t :No_participant %></p>
 <% end %>
 
-<%= link_to t("New_Participant"), new_user_seminar_participant_path(current_user, @seminar) %>
-<%= link_to t("New_Seminar"), new_user_seminar_path %>
