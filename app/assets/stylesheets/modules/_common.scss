@@ -30,7 +30,7 @@ article {
   display: flex;
   align-items: baseline;
   padding-bottom: $wide;
-  h1 {
+  .pagetitle h1 {
     font-size: $huge;
     padding-right: $moderate;
   }
