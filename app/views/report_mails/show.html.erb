@@ -8,6 +8,8 @@
   <tr><th><%= t :Content %></th> <td><%= @mail.html_part.body %></td></tr>
 </table>
 
-<%= link_to user_seminar_send_report_path(current_user, @seminar) do %>
-  <i class="far fa-envelope"><%= t :Send_mail %></i>
-<% end %>
+<div class="send">
+  <%= link_to user_seminar_send_report_path(current_user, @seminar) do %>
+    <i class="far fa-envelope send-btn"><%= t :Send_mail %></i>
+  <% end %>
+</div>

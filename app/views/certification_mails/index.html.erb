@@ -9,7 +9,8 @@
   </table>
 <% end %>
 
-<%= link_to user_seminar_send_certification_path(current_user, @seminar) do %>
-  <i class="far fa-envelope"><%= t :Send_mail %></i>
-<% end %>
-
+<div class="send">
+  <%= link_to user_seminar_send_certification_path(current_user, @seminar) do %>
+    <i class="far fa-envelope send-btn"><%= t :Send_mail %></i>
+  <% end %>
+</div>

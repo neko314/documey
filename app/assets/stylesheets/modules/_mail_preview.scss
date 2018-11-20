@@ -11,3 +11,15 @@
 .preview th {
   width: 15rem;
 }
+
+.send {
+  margin: auto;
+  .send-btn {
+    background: $accent;
+    border: 1px solid $accent;
+    padding: $narrow;
+    margin: $moderate;
+    border-radius: 0.5rem;
+    color: $header-footer-text;
+  }
+}
