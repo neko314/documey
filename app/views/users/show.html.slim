@@ -1,0 +1,27 @@
+.page-title
+  h1
+    = t :My_Profile
+  = link_to edit_user_path(@user) do
+    i.fas.fa-user-edit
+      = t :Edit_Profile
+table.user-infos
+  tr.user-info
+    th.user-info-title
+      = t :Name
+    td.user-info-content
+      = @user.name
+  tr.user-info
+    th.user-info-title
+      = t :Kana
+    td.user-info-content
+      = @user.kana
+  tr.user-info
+    th.user-info-title
+      = t :Email
+    td.user-info-content
+      = @user.email
+  tr.user-info
+    th.user-info-title
+      = t :Membership_Number
+    td.user-info-content
+      = @user.membership_number

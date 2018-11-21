@@ -1,6 +1,0 @@
-<h1 class="page-title"><%= t :Edit_Participant %></h1>
-
-<%= render 'form', participant: @participant %>
-
-<%= link_to t("Delete_Participant"), user_seminar_participant_path(current_user, @seminar, @participant), method: :delete , data: { confirm: 'Are_you_sure?' } %>
-<%= link_to t("Seminar"), user_seminar_path(current_user, @seminar) %>

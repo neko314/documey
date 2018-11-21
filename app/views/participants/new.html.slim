@@ -1,0 +1,4 @@
+h1.page-title
+  = t :New_Parcitipant
+= render 'form', participant: @participant
+= link_to t('Seminar'), user_seminar_path(current_user, @seminar)

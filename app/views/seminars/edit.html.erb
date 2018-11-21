@@ -1,6 +1,0 @@
-<h1 class="page-title"><i class="fas fa-edit"><%= t :Edit_Seminar %></i></h1>
- 
-<%= render "form", seminar: @seminar %>
-
-<%= link_to t("Delete_Seminar"), user_seminar_path(@seminar), method: :delete, data: { confirm: "Are_you_sure?" }  %>
-<%= link_to t("Seminars"), user_seminars_path(current_user) %>
