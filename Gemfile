@@ -38,6 +38,8 @@ gem "wkhtmltopdf-binary"
 gem "wicked_pdf"
 gem "sassc-rails"
 gem "rails-i18n", "~> 5.1"
+gem "slim-rails"
+gem "html2slim"
 
 group :development, :test do
   gem "sqlite3"

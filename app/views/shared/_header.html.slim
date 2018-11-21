@@ -1,0 +1,27 @@
+nav.header-nav
+  ul.header-menus
+    li
+      = link_to "/" do
+        = image_tag 'logo_white.svg', class:"logo"
+    - if current_user
+      li.menu
+        = link_to user_path(current_user) do
+          i.fas.fa-user
+            = "#{current_user.name}"
+      li.menu
+        = link_to user_seminars_path(current_user) do
+          i.fas.fa-chalkboard-teacher
+            = t :My_Seminars
+      li.menu
+        = link_to  :logout, method: :post do
+          i.fas.fa-sign-out-alt
+            = t :Logout
+    - else
+      li.menu
+        = link_to new_user_session_path do
+          i.fas.fa-sign-in-alt
+            = t :Login
+      li.menu
+        = link_to new_user_path do
+          i.fas.fa-user-plus
+            = t :Signup

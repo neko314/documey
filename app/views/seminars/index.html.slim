@@ -1,0 +1,28 @@
+h1.page-title
+  i.fas.fa-chalkboard-teacher
+    = t :Seminars
+- if @seminars
+  table.seminars
+    thead
+      tr
+        th
+          = t :Start_at
+        th
+          = t :Place
+        th
+          = t :Title
+        th[colspan="1"]
+    tbody
+      - @seminars.each do |seminar|
+        tr
+          td
+            = seminar.start_at.strftime("%Y-%m-%d %k:%M")
+          td
+            = seminar.place
+          td
+            = seminar.title
+          td
+            = link_to t("Show"), user_seminar_path(current_user, seminar)
+- else
+  p
+    = t :No_Seminar
