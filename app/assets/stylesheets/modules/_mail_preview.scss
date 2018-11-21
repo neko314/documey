@@ -1,8 +1,11 @@
 .preview {
   background: header-footer-text;
-  // line-height: 3rem;
 }
 
+.preview::after {
+  content: "\A";
+  white-space: pre;
+}
 .preview th,
 .preview td {
   border: 1px solid $table-line;
