@@ -1,7 +1,7 @@
 h1.page-title
   i.fas.fa-chalkboard-teacher
     = t :Seminars
-- if @seminars
+- if @seminars.present?
   table.seminars
     thead
       tr
@@ -24,5 +24,5 @@ h1.page-title
           td
             = link_to t("Show"), user_seminar_path(current_user, seminar)
 - else
-  p
-    = t :No_Seminar
+  strong.no-data
+    = t :Registrate_your_seminar!
