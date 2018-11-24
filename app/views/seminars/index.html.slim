@@ -24,5 +24,7 @@ h1.page-title
           td
             = link_to t("Show"), user_seminar_path(current_user, seminar)
 - else
-  strong.no-data
-    = t :Registrate_your_seminar!
+  div.no-seminar
+    p.no-semimar-message
+      = t :Registrate_your_seminar!
+    = link_to t("New_Seminar"), new_user_seminar_path(current_user)
