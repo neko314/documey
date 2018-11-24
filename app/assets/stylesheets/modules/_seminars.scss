@@ -47,3 +47,12 @@
     border: 1px solid $table-line;
   }
 }
+
+.no-participant {
+  display: flex;
+  align-items: center;
+  padding: $moderate;
+  margin: auto;
+  text-align: center;
+  font-size: $large;
+}
