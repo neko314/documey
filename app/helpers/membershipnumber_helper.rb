@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module MembershipnumberHelper
   def membership_number(person)
     if person.membership_number.blank?
