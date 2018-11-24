@@ -20,5 +20,5 @@ table.participant-infos
     th.participant-info-title
       = t :Membership_Number
     td.participant-info-content
-      = @participant.membership_number
+      = membership_number(@participant)
 = link_to t('Seminar'), user_seminar_path(current_user, @seminar)
