@@ -32,7 +32,9 @@ article {
   padding-bottom: $wide;
   .pagetitle h1 {
     font-size: $huge;
-    padding-right: $moderate;
+  }
+  i {
+    padding-left: $moderate;
   }
 }
 
