@@ -24,8 +24,9 @@
 .actions {
   padding: $narrow;
   margin: $wide auto;
-  color: header-footer-text;
+  color: $header-footer-text;
   background: $accent;
+  font-weight: bold;
   border: 1px solid $accent;
   border-radius: 1rem;
   font-size: $normal;
