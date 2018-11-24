@@ -1,5 +1,6 @@
-class ParticipantsController < ApplicationController
+# frozen_string_literal: true
 
+class ParticipantsController < ApplicationController
   def index
     @seminar = Seminar.find(params[:seminar_id])
     @participants = @seminar.participants
@@ -54,5 +55,4 @@ class ParticipantsController < ApplicationController
     def participant_params
       params.require(:participant).permit(:name, :membership_number, :email)
     end
-
 end

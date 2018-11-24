@@ -1,4 +1,6 @@
-require 'test_helper'
+# frozen_string_literal: true
+
+require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
   setup do
@@ -48,7 +50,7 @@ class UserTest < ActiveSupport::TestCase
   test "membership number is invalid when it's not unique" do
     @user.membership_number = "ABC123456"
     @user.save
-    other_user =  users(:user2)
+    other_user = users(:user2)
     other_user.membership_number = "ABC123456"
     assert other_user.invalid?
   end
@@ -66,7 +68,7 @@ class UserTest < ActiveSupport::TestCase
   test "email is invalid when is not unique" do
     @user.email = "user@example.com"
     @user.save
-    other_user =  users(:user2)
+    other_user = users(:user2)
     other_user.email = "user@example.com"
     assert other_user.invalid?
   end

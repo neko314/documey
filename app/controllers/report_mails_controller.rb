@@ -1,5 +1,6 @@
-class ReportMailsController < ApplicationController
+# frozen_string_literal: true
 
+class ReportMailsController < ApplicationController
   def show
     @seminar = Seminar.find(params[:seminar_id])
     @mail = ReportMailer.with(user: current_user, seminar: @seminar).report_mail
