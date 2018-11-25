@@ -96,6 +96,14 @@ li {
   line-height: 3rem;
 }
 
+.participants {
+  padding-left: 1rem;
+  text-align: left;
+  .sum {
+    padding-left: 15rem;
+  }
+}
+
 /*ページ最下部に固定したい*/
 .report-footer {
   margin: 2rem;
