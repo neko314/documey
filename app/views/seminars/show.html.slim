@@ -61,5 +61,6 @@ p
             td
               = link_to t("Show_Participant"), user_seminar_participant_path(current_user, @seminar, p)
     - else
-      p
-        = t :No_participant
+      div.no-participant
+        p
+          = t :No_participant
