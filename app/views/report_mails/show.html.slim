@@ -1,32 +1,32 @@
-.page-title
-  h1
-    = t :Preview
+h1.page-title
+  = t :Preview
 table.preview
   tr
     th
-      | From
+      = t :From
     td
       = @mail.from.first
   tr
     th
-      | To
+      = t :To
     td
       = @mail.to.first
   tr
     th
-      | Subject
+      = t :Subject
     td
       = @mail.subject
   tr
     th
-      | Attachment
+      = t :Attachment
     td
       = link_to @mail.attachments.first.filename, user_seminar_report_path(format: "pdf")
   tr
     th
-      | Content
+      = t :Content
     td
       = @mail.html_part.body
-= link_to user_seminar_send_report_path(current_user, @seminar) do
-  i.far.fa-envelope
-    = t :Send_mail
+.send
+  = link_to user_seminar_send_report_path(current_user, @seminar) do
+    i.far.fa-envelope.send-btn
+      = t :Send_mail

@@ -5,30 +5,31 @@
   table.preview
     tr
       th
-        | From
+        = t :From
       td
         = mail.from.first
     tr
       th
-        | To
+        = t :To
       td
         = mail.to.first
     tr
       th
-        | Subject
+        = t :Subject
       td
         = mail.subject
     tr
       th
-        | Attachment
+        = t :Attachment
       td
         - @participant = Participant.find_by(email: mail.to.first)
         = link_to mail.attachments.first.filename, user_seminar_certification_path(participant: @participant, format: "pdf")
     tr
       th
-        | Content
+        = t :Content
       td
         = mail.html_part.body
-= link_to user_seminar_send_certification_path(current_user, @seminar) do
-  i.far.fa-envelope
-    = t :Send_mail
+.send
+  = link_to user_seminar_send_certification_path(current_user, @seminar) do
+    i.far.fa-envelope.send-btn
+      = t :Send_mail
