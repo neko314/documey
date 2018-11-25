@@ -80,7 +80,9 @@ html
                   = "#{participant.membership_number} : #{participant.name}"
                   br
               tr
-
+            - else
+              td.report-td
+              tr
       footer.report-footer
         ul.footer-contact
           li
