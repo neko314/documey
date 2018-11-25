@@ -5,6 +5,16 @@
   line-height: $very-wide;
 }
 
+.no-seminar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $moderate;
+  margin: auto;
+  text-align: center;
+  font-size: $large;
+}
+
 // セミナー個別ページ
 .create-mail{
   display: flex;
