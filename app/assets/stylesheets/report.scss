@@ -4,56 +4,60 @@ li {
   list-style: none;
 }
 
+.report {
+  width: 172mm;
+  height: 251mm;
+  background: lightblue;
+}
+
 .report-header {
-  height: 10rem;
+  height: 5rem;
   font-weight: bold;
-}
-
-.kinds {
-  float: right;
-}
-
-.category {
-  padding: 1rem;
-  display: inline;
-  position: relative;
-  top: 4rem;
-  right: 15rem;
-  border: 1px solid black;
-  font-size: 1rem;
-  font-weight: 1000;
-  color: gray;
-}
-
-.alphabet {
-  position: relative;
-  border: 1px solid black;
-  padding: 2rem 4rem;
-  font-family: 'Avenir';
-  font-size: 3rem;
-  font-weight: bold;
-} 
-
-.header-contact {
-  position: relative;
-  left: 50%;
-  top: 4rem;
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-
-.contact {
-  text-align: left;
+  .kinds {
+    float: right;
+    .category {
+      display: inline;
+      position: relative;
+      top: 3rem;
+      right: 7rem;
+      border: 1px solid black;
+      font-size: 1rem;
+      font-weight: 1000;
+      color: gray;
+    }
+    .alphabet {
+      position: relative;
+      left: 1rem;
+      border: 1px solid black;
+      width: 4rem;
+      font-family: 'Avenir';
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .header-contact {
+    position: relative;
+    left: 15rem;
+    top: 2rem;
+    font-size: 1rem;
+    font-weight: 900;
+    .contact {
+      text-align: left;
+    }
+  }
 }
 
 .report-address {
   margin-top: 1rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
 .report-content {
   text-align:center;
   margin: 0 2rem;
+  min-height: calc(100vh - 30rem);
+  background: yellow;
 }
 
 .created_on {
@@ -99,9 +103,6 @@ li {
 .participants {
   padding-left: 1rem;
   text-align: left;
-  .sum {
-    padding-left: 15rem;
-  }
 }
 
 /*ページ最下部に固定したい*/
