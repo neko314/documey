@@ -4,85 +4,102 @@ li {
   list-style: none;
 }
 
-image {
-  float: left;
+.certification {
+  width: 172mm;
+  height: 251mm;
+  background: yellow;
 }
 
 header {
-  height: 6rem;
-}
-
-.alphabet {
-  float: right;
-  border: 1px solid black;
-  padding: 0 4rem;
-  font-size: 2rem;
+  height: 5.5rem;
+  margin-right: 0.5rem;
+  .logo {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    float: left;
+  }
+  .alphabet {
+    margin-top: 1rem;
+    float: right;
+    border: 1px solid black;
+    width: 4rem;
+    font-family: 'Avenir';
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
 .number {
-  height: 7rem;
-}
-.association {
-  text-align: right;
-  line-height: 2.5rem;
+  height: 5rem;
+  background: pink;
+  margin: 0 1rem;
   font-size: 1rem;
-  border-bottom: 1px solid black;
-}
-
-.no {
-  line-height: 2.5rem;
-  font-size: 1rem;
-  border-bottom: 1px solid black;
-  float: right;
+  .association {
+    text-align: right;
+    border-bottom: 1px solid black;
+  }
+  .no {
+    margin-top: 1.5rem;
+    border-bottom: 1px solid black;
+    float: right;
+  }
+  .no::after {
+    content: "9999";
+    visibility:hidden;
+  }
 }
 
 .contents {
   border: 1px solid black;
-  padding: 2.5rem;
+  padding: 1rem;
+  margin: 0 1rem;
 }
 
 .title {
+  margin-bottom: 1rem;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
+  .subtitle {
+    font-size: 0.7rem;
+  }
 }
 
-.subtitle {
-  font-size: 1rem;
+.explanation {
+  font-size: 0.7rem;
 }
 
 table, th, td {
   font-size: 1rem;
   margin: auto;
   line-height: 3rem;
+  th {
+    width: 10rem;
+  }
+  td {
+    width: 25rem;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+  .create_on {
+    border: none;
+    text-align: right;
+  }
 }
 
-table {
-  width: 90%;
-}
-
-th {
-  width: 40%;
-}
-
-td {
-  border-bottom: 1px solid black;
-}
-
-.create_on {
-  border: none;
-  text-align: right;
+.organizer {
+  font-size: 0.9rem;
 }
 
 footer {
-  margin-top: 5rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
   text-align: left;
-  line-height: 2.5rem;
 }
 
 .page-break {
   page-break-after: always;
-
   &:last-child {
     page-break-after: avoid;
   }
