@@ -7,7 +7,6 @@ li {
 .report {
   width: 172mm;
   height: 251mm;
-  background: lightblue;
 }
 
 .report-header {
@@ -51,67 +50,69 @@ li {
 .report-address {
   margin-top: 1rem;
   line-height: 1.5rem;
+  .created_on {
+    text-align: right;
+  }
+  .association {
+    text-align: left;
+  }
 }
 
 .report-content {
   text-align:center;
   margin: 0 2rem;
-  min-height: calc(100vh - 30rem);
-  background: yellow;
+  height: 180mm;
 }
 
-.created_on {
-  text-align: right;
-}
-
-.association {
-  text-align: left;
-}
 
 .report-title {
-  font-size: 2rem;
-  border-bottom: 1px solid black;
-}
-
-.subtitle {
   font-size: 1.5rem;
+  border-bottom: 1px solid black;
+  .subtitle {
+    font-size: 1rem;
+  }
 }
 
 .subtext {
   font-size: 1rem;
   text-align: left;
-  margin: 2rem 0;
+  margin: 0.5rem 0;
 }
 
 .report-table, .report-th, .report-td {
-  font-size: 2rem;
+  font-size: 1rem;
+  margin: auto;
   text-align: center;
   border-collapse: collapse;
   border: 1px solid black;
+  .report-table {
+    width: 100%;
+  }
+  .report-th {
+    width: 10rem;
+    background: whitesmoke;
+    line-height: 2rem;
+  }
+  .report-td {
+    width: 70%;
+  }
+  .kana {
+    font-size: 0.7rem;
+    line-height: 1rem;
+    border-bottom: 1px dashed black;
+  }
+  .participants {
+    padding-left: 1rem;
+    text-align: left;
+  }
 }
 
-.report-table {
-  width: 100%;
-}
-
-.report-th {
-  width: 30%;
-  background: whitesmoke;
-  line-height: 3rem;
-}
-
-.participants {
-  padding-left: 1rem;
-  text-align: left;
-}
-
-/*ページ最下部に固定したい*/
 .report-footer {
   margin: 2rem;
   bottom: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
-  line-height: 3rem;
+  line-height: 2rem;
   color: white; 
   background: black;
   font-weight: bold;
