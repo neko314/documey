@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 class CertificationsController < ApplicationController
-  def index
+  
+  def show
     @seminar = Seminar.find(params[:seminar_id])
-    @participants = @seminar.participants
+    @participant = Participant.find(params[:participant])
     respond_to do |format|
       format.html
       format.pdf do
