@@ -1,0 +1,87 @@
+| <!doctype html> 
+html
+  head
+    meta[charset="utf-8"]
+    = wicked_pdf_stylesheet_link_tag "certification"
+    = wicked_pdf_javascript_include_tag "number_pages"
+  body[onload="number_pages"]
+    .certification
+      header
+        ul.certification-header
+          li.logo
+            = wicked_pdf_image_tag 'jcda.png'
+          li.alphabet
+            p
+              | E
+      ul.number
+        li.association
+          | 特定非営利活動法人 日本キャリア開発協会
+        li.no
+          | NO
+      .contents
+        h1.title
+          | 参加証明書
+          span.subtitle
+            | （JCDA/支部/地区会・研究会・ピアトレ・各種勉強会）
+        p.explanation
+          | 下記の内容で、参加したことを証明します。
+        table
+          tr
+            th
+              | 氏名
+            td
+              = @participant.name
+          tr
+            th
+              | 会員番号
+            td
+              = @participant.membership_number
+          tr
+            th
+              | 取得ポイント
+            td
+              = @seminar.point
+              | ポイント
+          tr
+            th
+              | 日時
+            td
+              = "#{@seminar.start_at.strftime("%Y-%m-%d %k:%M")} ~ #{@seminar.finish_at.strftime("%Y-%m-%d %k:%M")}"
+          tr
+            th
+              | 場所
+            td
+              = @seminar.place
+          tr
+            th
+              | 勉強会名称
+            td
+              = @seminar.title
+          tr
+            th
+              | 内容
+            td
+          tr
+            th
+            td.create_on
+              = "#{Date.today.year}年 #{Date.today.month}月 #{Date.today.day}日"
+          tr
+            th
+              | 開催責任者（幹事）：
+            td
+              = @seminar.user.name
+        p.organizer
+          | （実施報告書の FAX 受領により、幹事署名は必須ではなく、無署名でも有効です。）
+        footer
+          ul
+            li
+              | ★更新ポイントの申告は自己申告制です。 
+            li
+              | 【CDA 資格取得(入会)月】 【更新ポイント申告期間】
+            li
+              | ・１０月度会員（4 月～9 月入会） ⇒ 10 月 1 日～10 月 31 日
+            li
+              | ・４月度会員（10 月～3 月入会） ⇒ 4 月 1 日～4 月 30 日
+            li
+              | ※詳細はホームページ（http://www.j-cda.jp）にてご確認ください。
+      .page-break

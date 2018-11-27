@@ -37,9 +37,9 @@ html
           | 下記の通り、活動を行いましたので、報告いたします。
         table.report-table
           tr
-            th.report-th
+            th.report-th.kana
               | フリガナ
-            td.report-td
+            td.report-td.kana
               = @seminar.user.kana
           tr
             th.report-th
@@ -73,14 +73,17 @@ html
               = @seminar.theme
           tr
             th.report-th
-              | 参加者氏名 (CDA 会員特定要)
+              | 参加者氏名 <br> (CDA 会員特定要)
             - if @seminar.participants.present?
-              td.report-td
+              td.report-td.participants
                 - @seminar.participants.each do |participant|
                   = "#{participant.membership_number} : #{participant.name}"
                   br
-              tr
-
+                .sum
+                  | 計#{@seminar.participants.count}名
+            - else
+              td.report-td
+            tr
       footer.report-footer
         ul.footer-contact
           li
