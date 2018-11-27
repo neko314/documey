@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class CertificationsController < ApplicationController
-  
   def show
     @seminar = Seminar.find(params[:seminar_id])
     @participant = Participant.find(params[:participant])
