@@ -5,8 +5,8 @@ li {
 }
 
 .report {
-  width: 172mm;
-  height: 251mm;
+  width: 210mm;
+  height: 297mm;
 }
 
 .report-header {
@@ -60,8 +60,8 @@ li {
 
 .report-content {
   text-align:center;
-  margin: 0 2rem;
-  height: 180mm;
+  margin: 0 1rem;
+  height: 220mm;
 }
 
 
@@ -89,12 +89,12 @@ li {
     width: 100%;
   }
   .report-th {
-    width: 10rem;
+    width: 20rem;
     background: whitesmoke;
     line-height: 2rem;
   }
   .report-td {
-    width: 70%;
+    width: 80%;
   }
   .kana {
     font-size: 0.7rem;
@@ -104,11 +104,12 @@ li {
   .participants {
     padding-left: 1rem;
     text-align: left;
+    height: 150mm;
   }
 }
 
 .report-footer {
-  margin: 2rem;
+  margin: 2rem 1rem;;
   bottom: 0;
   font-size: 1.5rem;
   text-align: center;

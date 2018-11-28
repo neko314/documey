@@ -5,9 +5,9 @@ li {
 }
 
 .certification {
-  width: 172mm;
-  height: 251mm;
-  background: yellow;
+  width: 210mm;
+  height: 297mm;
+  padding-top: 3rem; 
 }
 
 header {
@@ -32,7 +32,6 @@ header {
 
 .number {
   height: 5rem;
-  background: pink;
   margin: 0 1rem;
   font-size: 1rem;
   .association {
@@ -52,7 +51,7 @@ header {
 
 .contents {
   border: 1px solid black;
-  padding: 1rem;
+  padding: 2rem 1rem;
   margin: 0 1rem;
 }
 
@@ -95,6 +94,7 @@ table, th, td {
 footer {
   margin-top: 2rem;
   margin-left: 2rem;
+  line-height: 1.5rem;
   text-align: left;
 }
 
