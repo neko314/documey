@@ -23,6 +23,7 @@ h1.page-title
             = seminar.title
           td
             = link_to t("Show"), user_seminar_path(current_user, seminar)
+  =paginate @seminars
 - else
   div.no-seminar
     p.no-semimar-message

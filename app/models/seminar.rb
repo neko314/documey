@@ -10,4 +10,6 @@ class Seminar < ApplicationRecord
   validates :title, presence: true
   validates :theme, presence: true
   validates :point, presence: true
+
+  paginates_per 10
 end

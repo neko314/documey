@@ -2,7 +2,7 @@
 
 class SeminarsController < ApplicationController
   def index
-    @seminars = current_user.seminars
+    @seminars = current_user.seminars.page params[:page]
   end
 
   def show
