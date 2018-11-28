@@ -7,6 +7,7 @@ class SeminarsController < ApplicationController
 
   def show
     @seminar = Seminar.find(params[:id])
+    @participants = @seminar.participants.page params[:page]
   end
 
   def new
