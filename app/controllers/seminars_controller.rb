@@ -2,11 +2,12 @@
 
 class SeminarsController < ApplicationController
   def index
-    @seminars = current_user.seminars
+    @seminars = current_user.seminars.page params[:page]
   end
 
   def show
     @seminar = Seminar.find(params[:id])
+    @participants = @seminar.participants.page params[:page]
   end
 
   def new
