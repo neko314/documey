@@ -25,7 +25,7 @@ table.preview
     th
       = t :Content
     td
-      = @mail.html_part.body
+      == @mail.html_part.body
 .send
   = link_to user_seminar_send_report_path(current_user, @seminar) do
     i.far.fa-envelope.send-btn
